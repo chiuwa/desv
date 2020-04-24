@@ -15,7 +15,6 @@ use TCG\Voyager\Models\Setting;
 
     @yield('social')
 
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 
     <!-- Animate.css -->
@@ -24,7 +23,6 @@ use TCG\Voyager\Models\Setting;
     <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 
@@ -54,40 +52,40 @@ use TCG\Voyager\Models\Setting;
         <div class="top-menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-4">
-					 <div class="logo col-md-2 col-sm-3 col-xs-5 ">
+                    <div class="col-xs-5 logo_dw">
+					 <div class="logo col-md-2 col-sm-3 col-xs-4 ">
 					 @php
 					 $admin_favicon = Voyager::setting('site.logo', '');
 					 @endphp
-
 					@if($admin_favicon !== '')
 						<img  style="width: 100%;" src="{{ Voyager::image($admin_favicon) }}" type="image/png">
 					@endif
 					 </div>
-                        <div id="colorlib-logo"><a href="/">{{setting('site.title')}}</div>
+                        <div id="colorlib-logo"><a href="/">{{setting('site.title')}}</a></div>
                     </div>
-                   <div class="col-xs-8 text-right menu-1">
-                       <ul>
-                            <li><a href="/">Home</a></li>
-							<li class="active"><a href="/sister/index">Search</a></li>
-                           <li class="has-dropdown">
-                              <a href="/">Blog</a>
-                               <ul class="dropdown">
-                                   <li><a href="single.html">Blog Single</a></li>
-                                   <li><a href="#">Video</a></li>
-                                   <li><a href="#">Read</a></li>
-                                   <li><a href="#">Lifestyle</a></li>
-                               </ul>
-                            </li>
-
-                            <li><a href="travel.html">Travel</a></li>
-                            <li><a href="about.html">About Me</a></li>
-                           <li><a href="contact.html">Contact</a></li>
-                        </ul>
+					
+         <div class="col-xs-3 col-md-6 text-right pull-right lang">
+        <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                {{ LaravelLocalization::getCurrentLocaleName() }} <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                    <li>
+                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                            {{ $properties['native'] }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </li>
+    </ul> 
                    </div>
                 </div>
             </div>
         </div>
+		
     </nav>
 
     @yield('main_page')

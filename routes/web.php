@@ -13,12 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('user/profile', 'TestController@profile')->name('profile');
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
@@ -42,10 +36,18 @@ try {
     // do nothing
 }
 
-Route::get('/', 'HomeController@home');
+Route::group(['prefix' => LaravelLocalization::setLocale(),  'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function() {
+   Route::get('/','HomeController@home');
+
+    Auth::routes();
+
+    Route::get('/home', 'HomeController@home')->name('home');
+	Route::get('/blog/view/{id}', 'BlogController@home');
+});
+
+//Route::get('/','HomeController@home');
 
 
-Route::get('/blog/view/{id}', 'BlogController@home');
 
-Route::get('sister/index', 'FindSisterController@index')->name('sister_index');
 
+//Route::get('sister/index', 'FindSisterController@index')->name('sister_index');

@@ -231,3 +231,13 @@ return [
     ],
 
 ];
+
+Route::get('welcome/{locale}', function ($locale) {
+    if (! in_array($locale, ['en', 'tc'])) {
+        abort(400);
+    }
+
+    App::setLocale($locale);
+
+    //
+});

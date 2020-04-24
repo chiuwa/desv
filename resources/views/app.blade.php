@@ -3,7 +3,7 @@
 
 @section('title', setting('site.title'))
 @section('main_page')
-@php use TCG\Voyager\Models\Setting @endphp
+@php use \App\Http\Controllers\HomeController; @endphp
     <aside id="colorlib-breadcrumbs">
         <div class="container">
             <div class="row">
@@ -11,7 +11,7 @@
                     <!--h2>Blog</h2>
                     <p><span><a href="/">Home</a></span></p-->
 	 @php 
-		$carousel  = Setting::getCarousel(); 
+		$carousel  = HomeController::getCarousel(); 
 	@endphp					
 					 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -61,5 +61,26 @@
 @endsection
 
 @section('content')
-   
+       <div class="row row-pb-md">
+        @foreach($posts as $post)
+        <div class="col-md-4" style="height: 500px;">
+            <div class="blog-entry">
+                <div class="blog-img">
+                    <a href="/blog/view/{{ $post->post_id }}">
+                        <img src="{{ Voyager::image($post->thumbnail('medium')) }}" class="img-responsive" alt="html5 bootstrap template">
+                    </a>
+                </div>
+                <div class="desc">
+                    <p class="meta">
+                        <span class="cat"><a href="#">{{ $post->name }}</a></span>
+                        <span class="date">{{ date('Y-m-d', strtotime($post->created_at)) }}</span>
+{{--                        <span class="pos">By <a href="#">Rich</a></span>--}}
+                    </p>
+                    <h2><a href="/blog/view/{{ $post->post_id }}">{{ $post->title }}</a></h2>
+                    <p>{{  Str::limit($post->excerpt, 150, '...') }}</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
 @endsection
