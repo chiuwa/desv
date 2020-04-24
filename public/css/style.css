@@ -77,13 +77,21 @@ h1, h2, h3, h4, h5, h6, figure {
     margin: 0; } 
 	.lang{
 		margin-right: 65px;
+		margin-top:15px !important;
 	}
-	
+	.logo_dw{
+	  margin: 8.75px -15px;
+  }
 	}
-
+.lang{
+	margin-top:8px;
+		font-size: small;
+	}
 .colorlib-nav .top-menu {
   padding: 25px 0; }
-
+.top-menu{
+border-bottom: 3px solid;
+}
 .colorlib-nav #colorlib-logo {
  // font-size: 24px;
   margin: 0;
@@ -92,9 +100,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 700;
  // text-transform: uppercase; 
   }
-  .logo_dw{
-	  margin: 8.75px -15px;
-  }
+  
   .colorlib-nav #colorlib-logo a {
     position: relative;
     color: #000; }

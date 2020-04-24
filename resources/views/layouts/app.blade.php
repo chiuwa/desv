@@ -64,28 +64,44 @@ use TCG\Voyager\Models\Setting;
                         <div id="colorlib-logo"><a href="/">{{setting('site.title')}}</a></div>
                     </div>
 					
-         <div class="col-xs-3 col-md-6 text-right pull-right lang">
-        <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                {{ LaravelLocalization::getCurrentLocaleName() }} <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <li>
+        <div class="col-xs-5 col-md-6 text-right pull-right lang">
+       
+		<div>
+		@php $i = 0 ; @endphp		
+        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                      @if($i !== 0 )
+						<span> | </span>					
+						@endif
                         <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                             {{ $properties['native'] }}
                         </a>
-                    </li>
+							@php $i = $i+1 ; @endphp		
                 @endforeach
-            </ul>
-        </li>
-    </ul> 
+		</div>
+
                    </div>
                 </div>
             </div>
         </div>
-		
+		<div class="col-xs-8 text-right menu-1">
+                       <ul>
+                            <li><a href="/">Home</a></li>
+							<li class="active"><a href="/sister/index">Search</a></li>
+                           <li class="has-dropdown">
+                              <a href="/">Blog</a>
+                               <ul class="dropdown">
+                                   <li><a href="single.html">Blog Single</a></li>
+                                   <li><a href="#">Video</a></li>
+                                   <li><a href="#">Read</a></li>
+                                   <li><a href="#">Lifestyle</a></li>
+                               </ul>
+                            </li>
+
+                            <li><a href="travel.html">Travel</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                           <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                   </div>
     </nav>
 
     @yield('main_page')
