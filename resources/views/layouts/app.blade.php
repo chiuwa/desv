@@ -127,7 +127,7 @@ use TCG\Voyager\Models\Setting;
 
         <div class="footer-copyright">
             <span>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</span>
-       
+
         </div>
 
     </footer>
