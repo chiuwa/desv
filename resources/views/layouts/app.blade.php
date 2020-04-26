@@ -53,7 +53,7 @@ use TCG\Voyager\Models\Setting;
             <div class="container">
                 <div class="row">
                     <div class="col-xs-5 logo_dw">
-					 <div class="logo col-md-2 col-sm-3 col-xs-4 ">
+					 <div class="logo col-md-4 col-sm-6 col-xs-8 ">
 					 @php
 					 $admin_favicon = Voyager::setting('site.logo', '');
 					 @endphp
@@ -61,21 +61,20 @@ use TCG\Voyager\Models\Setting;
 						<img  style="width: 100%;" src="{{ Voyager::image($admin_favicon) }}" type="image/png">
 					@endif
 					 </div>
-                        <div id="colorlib-logo"><a href="/">{{setting('site.title')}}</a></div>
                     </div>
-					
+
         <div class="col-xs-5 col-md-6 text-right pull-right lang">
-       
+
 		<div>
-		@php $i = 0 ; @endphp		
+		@php $i = 0 ; @endphp
         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                       @if($i !== 0 )
-						<span> | </span>					
+						<span> | </span>
 						@endif
                         <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
                             {{ $properties['native'] }}
                         </a>
-							@php $i = $i+1 ; @endphp		
+							@php $i = $i+1 ; @endphp
                 @endforeach
 		</div>
 
@@ -83,38 +82,53 @@ use TCG\Voyager\Models\Setting;
                 </div>
             </div>
         </div>
-		<div class="col-xs-8 text-right menu-1">
-                       <ul>
-                            <li><a href="/">Home</a></li>
-							<li class="active"><a href="/sister/index">Search</a></li>
-                           <li class="has-dropdown">
-                              <a href="/">Blog</a>
+		<div class="col-xs-12 text-center menu-1">
+                       <ul class="navbar_ul">
+                            <li class="active navbar_li"><a href="/">@lang('frontend.home')</a></li>
+							<li class="navbar_li"><a href="/product/index">@lang('frontend.product')</a></li>
+                           <li class="has-dropdown navbar_li">
+                              <a href="/">@lang('frontend.services')</a>
                                <ul class="dropdown">
-                                   <li><a href="single.html">Blog Single</a></li>
-                                   <li><a href="#">Video</a></li>
-                                   <li><a href="#">Read</a></li>
-                                   <li><a href="#">Lifestyle</a></li>
+                                   <li><a href="#">@lang('frontend.services')</a></li>
+                                   <li><a href="#">@lang('frontend.services')</a></li>
+                                   <li><a href="#">@lang('frontend.services')</a></li>
+                                   <li><a href="#">@lang('frontend.services')</a></li>
                                </ul>
                             </li>
 
-                            <li><a href="travel.html">Travel</a></li>
-                            <li><a href="about.html">About Me</a></li>
-                           <li><a href="contact.html">Contact</a></li>
+                            <li class="navbar_li"><a href="travel.html">@lang('frontend.design')</a></li>
+                            <li class="navbar_li"><a href="about.html">@lang('frontend.develop') </a></li>
+                           <li class="navbar_li"><a href="contact.html">@lang('frontend.contact')</a></li>
                         </ul>
-                   </div>
+
+        </div>
     </nav>
 
     @yield('main_page')
 
     @yield('blog_single')
 
-    <div id="colorlib-container">
+    <div id="colorlib-container" style="min-height: 500px;">
         <div class="container">
             @yield('content')
         </div>
     </div>
 
     <footer  role="contentinfo">
+    <div class="col-md-12 footer">
+    <div class="row">
+        <div class="footer-up">
+            <div class="footer_title">
+                <p>@lang('frontend.contact')</p>
+            </div>
+            </div>
+    </div>
+    </div>
+
+        <div class="footer-copyright">
+            <span>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</span>
+       
+        </div>
 
     </footer>
 </div>

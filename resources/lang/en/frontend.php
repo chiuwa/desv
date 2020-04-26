@@ -1,9 +1,10 @@
 <?php
 
 return [
-
- 
-
-    'TEST' => 'TEST EN',
-   
+    'home'=>'Home',
+    'services'=>'Services',
+    'product'=>'Product',
+    'design'=>'Design',
+    'develop'=>'Develop',
+    'contact'=>'Contact Us',
 ];

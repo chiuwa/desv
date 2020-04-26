@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 @media screen and (max-width: 768px) {
   .colorlib-nav {
-    margin: 0; } 
+    margin: 0; }
 	.lang{
 		margin-right: 65px;
 		margin-top:15px !important;
@@ -83,10 +83,42 @@ h1, h2, h3, h4, h5, h6, figure {
 	  margin: 8.75px -15px;
   }
 	}
+
 .lang{
 	margin-top:8px;
 		font-size: small;
 	}
+
+.navbar_ul{
+    justify-content: center;
+ }
+
+.navbar_li{
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+}
+
+.footer{
+    background-color: #2f5c6f ;
+}
+.footer-up{
+    height: 300px;
+    background-color: #2f5c6f ;
+}
+.footer_title{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    color: #ffffff;
+
+}
+.footer-copyright{
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    background-color: #173947 ;
+}
 .colorlib-nav .top-menu {
   padding: 25px 0; }
 .top-menu{
@@ -98,9 +130,9 @@ border-bottom: 3px solid;
   padding: 0;
   line-height: 40px;
   font-weight: 700;
- // text-transform: uppercase; 
+ // text-transform: uppercase;
   }
-  
+
   .colorlib-nav #colorlib-logo a {
     position: relative;
     color: #000; }
@@ -112,7 +144,7 @@ border-bottom: 3px solid;
 .colorlib-nav ul {
   padding: 0;
  //margin: 5px 0 0 0;
-  
+
   }
   .colorlib-nav ul li {
     padding: 0;
@@ -124,12 +156,13 @@ border-bottom: 3px solid;
     letter-spacing: 1px; }
     .colorlib-nav ul li a {
       position: relative;
-      font-size: 12px;
+      font-size: 15px;
       padding: 10px 15px;
       color: rgba(0, 0, 0, 0.7);
       -webkit-transition: 0.5s;
       -o-transition: 0.5s;
-      transition: 0.5s; }
+      transition: 0.5s;
+        font-weight: bold;}
       .colorlib-nav ul li a:hover {
         color: #F6490D; }
     .colorlib-nav ul li.has-dropdown {
@@ -382,7 +415,7 @@ border-bottom: 3px solid;
     #colorlib-about,
     #colorlib-contact,
     #colorlib-footer {
-		
+
       padding: 1em 0; } }
 
 #colorlib-breadcrumbs {
@@ -1410,8 +1443,8 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0; }
-  
+
   .finder{
-	  
-	  
+
+
   }
