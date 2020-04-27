@@ -14,7 +14,7 @@
 		$carousel  = HomeController::getCarousel(); 
 	@endphp					
 					 
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div data-aos="zoom-out" id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
 	

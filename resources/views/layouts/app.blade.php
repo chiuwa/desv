@@ -14,15 +14,17 @@ use TCG\Voyager\Models\Setting;
     <meta name="author" content="" />
 
     @yield('social')
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"-->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+	
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 
@@ -52,7 +54,7 @@ use TCG\Voyager\Models\Setting;
         <div class="top-menu">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-5 logo_dw">
+                    <div  data-aos="fade-right" class="col-xs-5 logo_dw">
 					 <div class="logo col-md-4 col-sm-6 col-xs-8 ">
 					 @php
 					 $admin_favicon = Voyager::setting('site.logo', '');
@@ -63,7 +65,7 @@ use TCG\Voyager\Models\Setting;
 					 </div>
                     </div>
 
-        <div class="col-xs-5 col-md-6 text-right pull-right lang">
+        <div  data-aos="fade-right" class="col-xs-5 col-md-6 text-right pull-right lang">
 
 		<div>
 		@php $i = 0 ; @endphp
@@ -82,7 +84,7 @@ use TCG\Voyager\Models\Setting;
                 </div>
             </div>
         </div>
-		<div class="col-xs-12 text-center menu-1">
+		<div  data-aos="zoom-in" class="col-xs-12 text-center menu-1" >
                        <ul class="navbar_ul">
                             <li class="active navbar_li"><a href="/">@lang('frontend.home')</a></li>
 							<li class="navbar_li"><a href="/product/index">@lang('frontend.product')</a></li>
@@ -115,17 +117,20 @@ use TCG\Voyager\Models\Setting;
     </div>
 
     <footer  role="contentinfo">
-    <div class="col-md-12 footer">
+    <div  class="col-md-12 footer">
     <div class="row">
         <div class="footer-up">
             <div class="footer_title">
-                <p>@lang('frontend.contact')</p>
+                <p>@lang('frontend.contact')</p>		
             </div>
+				<div class="col-md-12 contact_info">
+				<p><span class="glyphicon glyphicon-earphone"></span></p>
+				</div>
             </div>
     </div>
     </div>
 
-        <div class="footer-copyright">
+        <div  class="footer-copyright">
             <span>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</span>
 
         </div>
@@ -154,7 +159,10 @@ use TCG\Voyager\Models\Setting;
 <script src="{{ asset('js/magnific-popup-options.js') }}"></script>
 <!-- Main -->
 <script src="{{ asset('js/main.js') }}"></script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
 
