@@ -16,41 +16,35 @@ use TCG\Voyager\Models\Setting;
     @yield('social')
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"-->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">	
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-	
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">	
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-
     <!-- Flexslider  -->
     <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
-
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+	
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-
     <!-- Theme style  -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
     <!-- Modernizr JS -->
     <script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="{{ asset('js/respond.min.js') }}"></script>
     <![endif]-->
-
 </head>
 <body>
 
 <div class="colorlib-loader"></div>
 <div id="page">
-    <nav class="colorlib-nav" role="navigation">
+    <nav class="colorlib-nav navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="top-menu">
             <div class="container">
                 <div class="row">
@@ -66,7 +60,6 @@ use TCG\Voyager\Models\Setting;
                     </div>
 
         <div  data-aos="fade-right" class="col-xs-5 col-md-6 text-right pull-right lang">
-
 		<div>
 		@php $i = 0 ; @endphp
         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -123,9 +116,16 @@ use TCG\Voyager\Models\Setting;
             <div class="footer_title">
                 <p>@lang('frontend.contact')</p>		
             </div>
-				<div class="col-md-12 contact_info">
-				<p><span class="glyphicon glyphicon-earphone"></span></p>
+				<div class="col-md-12 contact_on">
+				<div class="contact_info text-center">
+				<p class="contact_phone "><span class="glyphicon glyphicon-earphone"></span>@php echo(' '.Voyager::setting('site.phone'));  @endphp</p>
+				<p class="contact_email "><span class="glyphicon glyphicon-envelope"></span>@php echo(' '.Voyager::setting('site.email'));  @endphp</p>		
+				</div>	
 				</div>
+				<div class="contact_desc">
+				<p> @lang('frontend.contact_desc')</p>
+				</div>
+			
             </div>
     </div>
     </div>
@@ -156,9 +156,11 @@ use TCG\Voyager\Models\Setting;
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <!-- Magnific Popup -->
 <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+
 <script src="{{ asset('js/magnific-popup-options.js') }}"></script>
 <!-- Main -->
 <script src="{{ asset('js/main.js') }}"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
