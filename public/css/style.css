@@ -71,29 +71,29 @@ h1, h2, h3, h4, h5, h6, figure {
 ::selection {
   color: #fff;
   background: #F6490D; }
-  
-  
+
+
  .breadcrumbs {
 	     margin-top: 100px;
- } 
-  
+ }
+
   .js-colorlib-nav-toggle{
 	      position: fixed !important;
   }
-  
-@media screen and (max-width: 1250px) { 
+
+@media screen and (max-width: 1250px) {
 .contact_info{
   margin: auto;
-  width: 50% !important; 
+  width: 50% !important;
 	}
 	.contact_desc{
   margin: auto;
-  width: 60% !important; 
+  width: 60% !important;
 	}
 }
 @media screen and (max-width: 768px) {
   .colorlib-nav {
-    margin: 0; 
+    margin: 0;
 	}
 	.lang{
 		margin-right: 65px;
@@ -104,22 +104,22 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 .contact_info{
   margin: auto;
-  width: 80% !important;
+  width: 100% !important;
 	}
 	.contact_desc{
   margin: auto;
-  width: 80% !important;
+  width: 100% !important;
 	}
 }
-	
+
 @media screen and (min-width: 950px) {
-  
+
  .navbar_li{
     margin-left:2% !important;
     margin-right: 2% !important;
 	}
 }
-	
+
 .lang{
 	margin-top:8px;
 		font-size: small;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 30%;
   height:45px;
   color: #ffffff;
-   border-bottom: 3px solid #fff;	 
+   border-bottom: 3px solid #fff;
 }
 
 .contact_desc{
@@ -160,15 +160,13 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #ffffff;
   text-align: center;
   margin-top: 10px;
- 
+
 }
 .contact_phone{
 	float:left;
-	margin:10px;
 }
 .contact_email{
 	float:right;
-	margin:10px;
 }
 
 .footer-copyright{
