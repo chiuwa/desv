@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	      position: fixed !important;
   }
 
+
 @media screen and (max-width: 1250px) {
 .contact_info{
   margin: auto;
@@ -88,9 +89,26 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	.contact_desc{
   margin: auto;
-  width: 60% !important;
+  width: 45% !important;
 	}
+	
+	.name_title_div{
+	 margin: auto;
+	width: 60% !important;
+	
 }
+.email_phone{
+	margin: auto;
+	width: 60% !important;
+	margin-top: 20px;
+}	
+.submit_button{
+	margin: auto;
+	width: 60% !important;
+}
+}
+	
+
 @media screen and (max-width: 768px) {
   .colorlib-nav {
     margin: 0;
@@ -108,8 +126,41 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	.contact_desc{
   margin: auto;
-  width: 100% !important;
+  width: 85% !important;
 	}
+	
+	.name_title_div{
+	 margin: auto;
+	width: 100% !important;
+	
+}
+.email_phone{
+	margin: auto;
+	width: 100% !important;
+	margin-top: 20px;
+}
+.submit_button{
+	margin: auto;
+	width: 100% !important;
+}
+}
+
+@media (min-width: 1250px) and (max-width: 1790px) {
+
+.name_title_div{
+	 margin: auto;
+	width: 37% !important;
+	
+}
+.email_phone{
+	margin: auto;
+	width: 37% !important;
+	margin-top: 20px;
+}
+.submit_button{
+	margin: auto;
+	width: 37% !important;
+}
 }
 
 @media screen and (min-width: 950px) {
@@ -133,7 +184,7 @@ h1, h2, h3, h4, h5, h6, figure {
     background-color: #2f5c6f ;
 }
 .footer-up{
-    height: 300px;
+    min-height: 630px;
     background-color: #2f5c6f ;
 }
 .footer_title{
@@ -142,7 +193,6 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size: 30px;
     padding-top: 10px;
     color: #ffffff;
-
 }
 
 .contact_info{
@@ -155,8 +205,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .contact_desc{
   margin: auto;
-  width: 35%;
-  height:45px;
+  width: 25%;
+
   color: #ffffff;
   text-align: center;
   margin-top: 10px;
@@ -168,7 +218,73 @@ h1, h2, h3, h4, h5, h6, figure {
 .contact_email{
 	float:right;
 }
+.form_div{
 
+ margin-top: 10px;
+height:100px;
+}
+.name_title_div{
+	 margin: auto;
+	width: 25%;
+	 text-align: center;
+}
+.email_phone{
+	margin: auto;
+	width: 25%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.title_div{
+	float: left;
+    margin-left: 10px;
+}
+.title_redio{
+	 color: #ffffff;
+	 line-height: normal;
+}
+.username{
+	float: right;
+}
+.email{
+	float:left;
+	
+}
+.phone{
+	float: right;
+}
+
+.form_text{
+	height: 30px !important;
+	border-radius: 5px;
+	width: 80%;
+}
+.query_type{
+	margin: auto;
+	width:90%;
+	 color: #ffffff;
+	 border: 2px solid #ffffff !important;
+	 border-radius: 5px !important;
+	 text-align: center;
+	 background-color: #2f5c6f !important;
+}
+#query_question{
+	margin: auto;
+	width:90%;
+	border: 2px solid #ffffff !important;
+	border-radius: 5px !important;
+}
+.submit_button{
+	margin: auto;
+	width: 25%;
+	text-align: center;
+}
+.cus_submit_button{
+	margin: auto;
+	width: 90%;
+	text-align: center;
+	margin-top: 20px;
+}
 .footer-copyright{
     width: 100%;
     text-align: center;

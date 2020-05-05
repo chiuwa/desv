@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Post;
+use App\AskingQuery;
 use DB;
 class HomeController extends Controller
 {
@@ -26,4 +27,17 @@ class HomeController extends Controller
 		return $carousel;					
 		exit();
 	}
+	
+		public function asking(Request $request){
+		// $this->validate($request, [
+            // 'email' => 'required',
+            // 'rating' => 'required',
+        // ]);
+		$model = new AskingQuery();
+			echo '<pre>';
+			print_r($model);					
+			die();
+		}	
+	
+	
 }

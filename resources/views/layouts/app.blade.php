@@ -123,17 +123,66 @@ use TCG\Voyager\Models\Setting;
 				</div>	
 				</div>
 				<div class="contact_desc">
-				<p> @lang('frontend.contact_desc')</p>
+				<span> @lang('frontend.contact_desc')</span>
 				</div>
+	
+				{!! Form::open(array('action' => 'HomeController@asking')) !!}
+
+					<div class="form-group col-md-12">
+					<div class="form_div">
+					
+					<div class="text-center name_title_div">
+					<div class="title_div">
+					
+					<label class="radio-inline title_redio">{!! Form::radio('title', "mr", null,['required']) !!}Mr.</label>
+						
+					<label class="radio-inline title_redio">{!! Form::radio('title', "mrs", null) !!}Mrs.</label>
+						
+					<label class="radio-inline title_redio">{!! Form::radio('title', "miss", null) !!}Miss</label>
+					</div>	
+							
+					<label class="username">{!! Form::text('name', null, array('placeholder'=>' Surname','class'=>'form_text','required'=>'true')) !!}</label>
+					
+					</div>	
+					
+					<br>
+					
+					<div class="email_phone text-center">
+					<label class="email">{!! Form::email('email', null, array('placeholder'=>' Email','class'=>'form_text','required'=>'true')) !!}</label>
+					<label class="phone">{!! Form::text('phone', null, array('placeholder'=>' Phone (Option)','class'=>'form_text')) !!}</label>
+					</div>	
+
+					<br>
+					
+					<div class="email_phone text-center ">
+					@php
+					$query_types = ['test','test2'];
+					@endphp
+					{!! Form::select('query_type_name',$query_types, null, array('placeholder'=>' Query Type','class' => 'form-control query_type ','required'=>'true')) !!}
+					</div>	
+
+
+					<div class="email_phone text-center">
+					<label class="query_question">{!! Form::textarea('query_question', null, ['placeholder'=>'Any Question?','required'=>'true','id' => 'query_question', 'rows' => 4]) !!}</label>
+					</div>	
+
+					<div class="submit_button">
+							{{Form::submit('Submit', ['class' => 'btn btn-primary cus_submit_button'])}}
+						</div>
+					</div>
+	
+					
+			{!!  Form::close() !!}
 			
             </div>
     </div>
-    </div>
-
-        <div  class="footer-copyright">
+	  <div  class="footer-copyright">
             <span>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</span>
 
         </div>
+    </div>
+
+      
 
     </footer>
 </div>
