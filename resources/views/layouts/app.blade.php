@@ -16,20 +16,20 @@ use TCG\Voyager\Models\Setting;
     @yield('social')
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"-->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">	
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-	
+
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <!-- Theme style  -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -49,7 +49,7 @@ use TCG\Voyager\Models\Setting;
             <div class="container">
                 <div class="row">
                     <div  data-aos="fade-right" class="col-xs-5 logo_dw">
-					 <div class="logo col-md-4 col-sm-6 col-xs-8 ">
+					 <div class="logo col-md-4 col-sm-6 col-xs-7 ">
 					 @php
 					 $admin_favicon = Voyager::setting('site.logo', '');
 					 @endphp
@@ -114,66 +114,66 @@ use TCG\Voyager\Models\Setting;
     <div class="row">
         <div class="footer-up">
             <div class="footer_title">
-                <p>@lang('frontend.contact')</p>		
+                <p>@lang('frontend.contact')</p>
             </div>
 				<div class="col-md-12 contact_on">
 				<div class="contact_info text-center">
 				<p class="contact_phone "><span class="glyphicon glyphicon-earphone"></span>@php echo(' '.Voyager::setting('site.phone'));  @endphp</p>
-				<p class="contact_email "><span class="glyphicon glyphicon-envelope"></span>@php echo(' '.Voyager::setting('site.email'));  @endphp</p>		
-				</div>	
+				<p class="contact_email "><span class="glyphicon glyphicon-envelope"></span>@php echo(' '.Voyager::setting('site.email'));  @endphp</p>
+				</div>
 				</div>
 				<div class="contact_desc">
 				<span> @lang('frontend.contact_desc')</span>
 				</div>
-	
+
 				{!! Form::open(array('action' => 'HomeController@asking')) !!}
 
 					<div class="form-group col-md-12">
 					<div class="form_div">
-					
+
 					<div class="text-center name_title_div">
 					<div class="title_div">
-					
+
 					<label class="radio-inline title_redio">{!! Form::radio('title', "mr", null,['required']) !!}Mr.</label>
-						
+
 					<label class="radio-inline title_redio">{!! Form::radio('title', "mrs", null) !!}Mrs.</label>
-						
+
 					<label class="radio-inline title_redio">{!! Form::radio('title', "miss", null) !!}Miss</label>
-					</div>	
-							
+					</div>
+
 					<label class="username">{!! Form::text('name', null, array('placeholder'=>' Surname','class'=>'form_text','required'=>'true')) !!}</label>
-					
-					</div>	
-					
+
+					</div>
+
 					<br>
-					
+
 					<div class="email_phone text-center">
 					<label class="email">{!! Form::email('email', null, array('placeholder'=>' Email','class'=>'form_text','required'=>'true')) !!}</label>
 					<label class="phone">{!! Form::text('phone', null, array('placeholder'=>' Phone (Option)','class'=>'form_text')) !!}</label>
-					</div>	
+					</div>
 
 					<br>
-					
+
 					<div class="email_phone text-center ">
 					@php
 					$query_types = ['web_site'=>'WebSite Develope','design'=>'Design','start_up'=>'Start Up Plan','other'=>'Other'];
 					@endphp
 					{!! Form::select('query_type_name',$query_types, null, array('placeholder'=>' Query Type','class' => 'form-control query_type ','required'=>'true')) !!}
-					</div>	
+					</div>
 
 
 					<div class="email_phone text-center">
 					<label class="query_question">{!! Form::textarea('query_question', null, ['placeholder'=>'Any Question?','required'=>'true','id' => 'query_question', 'rows' => 4]) !!}</label>
-					</div>	
+					</div>
 
 					<div class="submit_button">
 							{{Form::submit('Submit', ['class' => 'btn btn-primary cus_submit_button'])}}
 						</div>
 					</div>
-	
-					
+
+
 			{!!  Form::close() !!}
-			
+
             </div>
     </div>
 	  <div  class="footer-copyright">
@@ -182,7 +182,7 @@ use TCG\Voyager\Models\Setting;
         </div>
     </div>
 
-      
+
 
     </footer>
 </div>
@@ -193,11 +193,11 @@ use TCG\Voyager\Models\Setting;
 
  <div id="popupmodal" class="modal hide fade popup_model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>         
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
             <p class="text-center">
-			@php 
+			@php
 			if(Session::has('modal_message_success')){
 				 echo( Session::get('modal_message_success') );
 			}elseif(Session::has('modal_message_error')){
@@ -206,7 +206,7 @@ use TCG\Voyager\Models\Setting;
              @endphp
             </p>
         </div>
-		
+
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
         </div>
@@ -238,11 +238,11 @@ use TCG\Voyager\Models\Setting;
 @if( Session::has('modal_message_error') || Session::has('modal_message_success'))
    <script type="text/javascript">
       $(document).ready(function() {
-        $('#popupmodal').modal();	
+        $('#popupmodal').modal();
 	$('#popupmodal').removeClass( "hide" )
       });
    </script>
-    
+
 @endif
 
 </body>

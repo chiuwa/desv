@@ -91,23 +91,23 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: auto;
   width: 45% !important;
 	}
-	
+
 	.name_title_div{
 	 margin: auto;
 	width: 60% !important;
-	
+
 }
 .email_phone{
 	margin: auto;
 	width: 60% !important;
 	margin-top: 20px;
-}	
+}
 .submit_button{
 	margin: auto;
 	width: 60% !important;
 }
 }
-	
+
 
 @media screen and (max-width: 768px) {
   .colorlib-nav {
@@ -128,11 +128,11 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: auto;
   width: 85% !important;
 	}
-	
+
 	.name_title_div{
 	 margin: auto;
 	width: 100% !important;
-	
+
 }
 .email_phone{
 	margin: auto;
@@ -147,8 +147,36 @@ h1, h2, h3, h4, h5, h6, figure {
 .popup_model{
 	top: 25%!important;
 	right:10%!important;
-	left: 10%!important;					    					   	     
-}			
+	left: 10%!important;
+}
+}
+@media screen and (max-width: 450px) {
+    .username{
+        width: 45%!important;
+    }
+    .phone{
+        width: 50%!important;
+    }
+    .email{
+        width: 50%!important;
+    }
+    .footer-up{
+        min-height: 650px!important;
+    }
+}
+@media screen and (max-width: 320px) {
+    .username{
+        width: 35%!important;
+    }
+    .phone{
+        width: 50%!important;
+    }
+    .email{
+        width: 50%!important;
+    }
+    .footer-up{
+        min-height: 670px!important;
+    }
 }
 
 @media (min-width: 1250px) and (max-width: 1790px) {
@@ -156,7 +184,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .name_title_div{
 	 margin: auto;
 	width: 37% !important;
-	
+
 }
 .email_phone{
 	margin: auto;
@@ -179,7 +207,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 	top: 25%!important;
 	right: 30%!important;
-    left: 30%!important;				    					   	     
+    left: 30%!important;
 }
 }
 
@@ -259,7 +287,7 @@ height:100px;
 }
 .email{
 	float:left;
-	
+
 }
 .phone{
 	float: right;
@@ -301,11 +329,11 @@ height:100px;
   background-color: inherit;
   height: 230px!important;
 	border-radius: 15px !important;
-	border: 2px solid #ffffff !important;	
+	border: 2px solid #ffffff !important;
 	top: 25%!important;
 	right: 35%
-	left: 35%				    					   	     
-}			
+	left: 35%
+}
 .modal-header{
 	padding: 18px!important;
 }
