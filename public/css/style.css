@@ -145,12 +145,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .popup_model{
-
 	top: 25%!important;
 	right:10%!important;
 	left: 10%!important;					    					   	     
 }			
-
 }
 
 @media (min-width: 1250px) and (max-width: 1790px) {
