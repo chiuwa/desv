@@ -123,7 +123,7 @@ use TCG\Voyager\Models\Setting;
 				</div>
 				</div>
 				<div class="contact_desc">
-				<span> @lang('frontend.contact_desc')</span>
+				<label> @lang('frontend.contact_desc')</label>
 				</div>
 
 				{!! Form::open(array('action' => 'HomeController@asking')) !!}
@@ -177,7 +177,7 @@ use TCG\Voyager\Models\Setting;
             </div>
     </div>
 	  <div  class="footer-copyright">
-            <span>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</span>
+            <label>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</label>
 
         </div>
     </div>
