@@ -150,18 +150,18 @@ h1, h2, h3, h4, h5, h6, figure {
 	left: 10%!important;
 }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
     .username{
         width: 45%!important;
     }
     .phone{
-        width: 50%!important;
+        width: 45%!important;
     }
     .email{
-        width: 50%!important;
+        width: 45%!important;
     }
     .footer-up{
-        min-height: 650px!important;
+        min-height: 670px!important;
     }
 }
 @media screen and (max-width: 320px) {
@@ -169,10 +169,10 @@ h1, h2, h3, h4, h5, h6, figure {
         width: 35%!important;
     }
     .phone{
-        width: 50%!important;
+        width:  45%!important;
     }
     .email{
-        width: 50%!important;
+        width:  45%!important;
     }
     .footer-up{
         min-height: 670px!important;
