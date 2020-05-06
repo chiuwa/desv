@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use TCG\Voyager\Models\Post;
 use App\AskingQuery;
 use DB;
+use Redirect;
 class HomeController extends Controller
 {
     public function home(){
@@ -34,9 +35,19 @@ class HomeController extends Controller
             // 'rating' => 'required',
         // ]);
 		$model = new AskingQuery();
-			echo '<pre>';
-			print_r($model);					
-			die();
+		$model->title = $request->title;
+		$model->name = $request->name;
+		$model->email = $request->email;
+		$model->phone = $request->phone;
+		$model->phone = $request->phone;
+		$model->query_type = $request->query_type_name;
+		$model->asking = $request->query_question;
+		$model->save();
+		if($model->save()){
+		return Redirect::back()->with("modal_message_success", "Submit Success <br> We will reply to you as soon as possible");
+		}else{
+			return Redirect::back()->with("modal_message_error", "Submit Error");
+			}
 		}	
 	
 	

@@ -156,7 +156,7 @@ use TCG\Voyager\Models\Setting;
 					
 					<div class="email_phone text-center ">
 					@php
-					$query_types = ['test','test2'];
+					$query_types = ['web_site'=>'WebSite Develope','design'=>'Design','start_up'=>'Start Up Plan','other'=>'Other'];
 					@endphp
 					{!! Form::select('query_type_name',$query_types, null, array('placeholder'=>' Query Type','class' => 'form-control query_type ','required'=>'true')) !!}
 					</div>	
@@ -191,6 +191,27 @@ use TCG\Voyager\Models\Setting;
     <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 </div>
 
+ <div id="popupmodal" class="modal hide fade popup_model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>         
+        </div>
+        <div class="modal-body">
+            <p class="text-center">
+			@php 
+			if(Session::has('modal_message_success')){
+				 echo( Session::get('modal_message_success') );
+			}elseif(Session::has('modal_message_error')){
+				  echo(  Session::get('modal_message_error') );
+			}
+             @endphp
+            </p>
+        </div>
+		
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
 <!-- jQuery -->
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <!-- jQuery Easing -->
@@ -214,6 +235,16 @@ use TCG\Voyager\Models\Setting;
 <script>
   AOS.init();
 </script>
+@if( Session::has('modal_message_error') || Session::has('modal_message_success'))
+   <script type="text/javascript">
+      $(document).ready(function() {
+        $('#popupmodal').modal();	
+	$('#popupmodal').removeClass( "hide" )
+      });
+   </script>
+    
+@endif
+
 </body>
 </html>
 

@@ -143,6 +143,14 @@ h1, h2, h3, h4, h5, h6, figure {
 	margin: auto;
 	width: 100% !important;
 }
+
+.popup_model{
+
+	top: 25%!important;
+	right:10%!important;
+	left: 10%!important;					    					   	     
+}			
+
 }
 
 @media (min-width: 1250px) and (max-width: 1790px) {
@@ -169,6 +177,12 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-left:2% !important;
     margin-right: 2% !important;
 	}
+	.popup_model{
+
+	top: 25%!important;
+	right: 30%!important;
+    left: 30%!important;				    					   	     
+}
 }
 
 .lang{
@@ -206,7 +220,6 @@ h1, h2, h3, h4, h5, h6, figure {
 .contact_desc{
   margin: auto;
   width: 25%;
-
   color: #ffffff;
   text-align: center;
   margin-top: 10px;
@@ -285,6 +298,20 @@ height:100px;
 	text-align: center;
 	margin-top: 20px;
 }
+
+.popup_model{
+  background-color: inherit;
+  height: 230px!important;
+	border-radius: 15px !important;
+	border: 2px solid #ffffff !important;	
+	top: 25%!important;
+	right: 35%
+	left: 35%				    					   	     
+}			
+.modal-header{
+	padding: 18px!important;
+}
+
 .footer-copyright{
     width: 100%;
     text-align: center;
