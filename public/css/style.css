@@ -186,21 +186,38 @@ h1, h2, h3, h4, h5, h6, figure {
     }
 }
 
-@media (min-width: 1250px) and (max-width: 1790px) {
+@media (min-width: 1250px) and (max-width: 2190px) {
 
 .name_title_div{
 	 margin: auto;
-	width: 37% !important;
+	width: 36% !important;
 
 }
 .email_phone{
 	margin: auto;
-	width: 37% !important;
+	width: 36% !important;
 	margin-top: 20px;
 }
 .submit_button{
 	margin: auto;
-	width: 37% !important;
+	width: 36% !important;
+}
+}
+@media (min-width: 2200px) and (max-width: 4500px) {
+
+.name_title_div{
+	 margin: auto;
+	width: 20% !important;
+
+}
+.email_phone{
+	margin: auto;
+	width: 20% !important;
+	margin-top: 20px;
+}
+.submit_button{
+	margin: auto;
+	width: 20% !important;
 }
 }
 
