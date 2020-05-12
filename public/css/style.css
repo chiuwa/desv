@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	margin: auto;
 	width: 60% !important;
 }
+
 }
 
 
@@ -243,6 +244,40 @@ h1, h2, h3, h4, h5, h6, figure {
 .navbar_ul{
     justify-content: center;
  }
+
+.content1{
+ margin: auto;
+	display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+@media screen and (max-width: 1024px) {
+	.content1{
+	display: block !important;
+	}	
+}
+.promotion_title_1{
+	font-weight: bold;
+	margin-top:20px;
+}
+.promotion_content_1{
+
+	text-align:center;
+}
+
+.desv_image{
+	width: 100%;
+}
+.image_class{
+	
+  display:flex;
+  justify-content:center; 
+  align-items:center;
+
+}
+.content_div{
+	border-bottom:1px solid #f6490d;
+}
 
 .footer{
     background-color: #2f5c6f ;
