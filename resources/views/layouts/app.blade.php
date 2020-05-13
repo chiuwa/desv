@@ -127,8 +127,34 @@ use TCG\Voyager\Models\Setting;
 			</div>
 		
 			</div>
+				</div>
+			
+			<p class="text-center promotion_title_1" data-aos="fade-right">
+			@lang('frontend.home_promotion_title_2')
+			</p>	
+			<div class="col-xs-12 col-md-12 content_div">
+			<div data-aos="zoom-out-right" class="content1">
+
+			<div class="col-xs-12 col-md-5 image_class">
+					@php
+					 $promotion_image_2 = Voyager::setting('site.promotion_image_2', '');
+					 @endphp
+					@if($promotion_image_1 !== '')
+						<img  class="content_image" data-aos="fade-up" data-aos-duration="3000" src="{{ Voyager::image($promotion_image_2) }}" type="image/png">
+					@endif
+			</div>
+
+
+			<div class="col-xs-12 col-md-7">
+			<p class="promotion_content_1">	@lang('frontend.home_promotion_content_1')</p>
+			</div>
+		
+		
 			</div>
 				</div>
+				
+				
+					</div>
 					
         </div>
     </div>
