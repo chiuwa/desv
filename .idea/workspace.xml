@@ -4,6 +4,8 @@
     <list default="true" id="e92ba3ac-d47f-49c6-a435-86614860646d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/frontend.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/frontend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/tc/frontend.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/tc/frontend.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,6 +179,7 @@
       <workItem from="1588084539697" duration="973000" />
       <workItem from="1588328117809" duration="1181000" />
       <workItem from="1588779402325" duration="4170000" />
+      <workItem from="1589713204088" duration="5269000" />
     </task>
     <servers />
   </component>
@@ -192,10 +195,10 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="781" y="346" key="SettingsEditor/0.0.2560.1410/2560.363.1920.1050@0.0.2560.1410" timestamp="1585110012423" />
-    <state x="741" y="411" key="com.intellij.ide.util.TipDialog" timestamp="1588780304714">
+    <state x="741" y="411" key="com.intellij.ide.util.TipDialog" timestamp="1589713204558">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="741" y="411" key="com.intellij.ide.util.TipDialog/0.0.2560.1410/2560.363.1920.1050@0.0.2560.1410" timestamp="1588780304714" />
+    <state x="741" y="411" key="com.intellij.ide.util.TipDialog/0.0.2560.1410/2560.363.1920.1050@0.0.2560.1410" timestamp="1589713204558" />
     <state x="3116" y="669" key="com.intellij.ide.util.TipDialog/0.0.2560.1410/2560.363.1920.1050@2560.363.1920.1050" timestamp="1585209271713" />
     <state x="870" y="193" width="880" height="1023" key="find.popup" timestamp="1587910895855">
       <screen x="0" y="0" width="2560" height="1410" />

@@ -106,11 +106,39 @@ use TCG\Voyager\Models\Setting;
     <div id="colorlib-container" style="min-height: 500px;">
         <div class="container">
             @yield('content')
-		
+
             <div class="row">
+
+
+                <div class="content_full">
+                <p class="text-center promotion_title_1" data-aos="fade-right">
+                    @lang('frontend.home_promotion_title_2')
+                </p>
+                <div class="col-xs-12 col-md-12 content_div">
+                    <div data-aos="zoom-out-right" class="content1">
+
+                        <div class="col-xs-12 col-md-5 image_class">
+                            @php
+                                $promotion_image_2 = Voyager::setting('site.promotion_image_2', '');
+                            @endphp
+                            @if($promotion_image_2 !== '')
+                                <img  class="content_image" data-aos="fade-right"
+                                      data-aos-anchor="#example-anchor"
+                                      data-aos-offset="500"
+                                      data-aos-duration="500" src="{{ Voyager::image($promotion_image_2) }}" type="image/png">
+                            @endif
+                        </div>
+                        <div class="col-xs-12 col-md-7">
+                            <p class="promotion_content_1">	@lang('frontend.home_promotion_content_2')</p>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+
+                <div  class="content_full">
 			<p class="text-center promotion_title_1" data-aos="fade-right">
 			@lang('frontend.home_promotion_title_1')
-			</p>	
+			</p>
 			<div class="col-xs-12 col-md-12 content_div">
 			<div data-aos="zoom-out-right" class="content1">
 
@@ -122,40 +150,19 @@ use TCG\Voyager\Models\Setting;
 					 $promotion_image_1 = Voyager::setting('site.promotion_image_1', '');
 					 @endphp
 					@if($promotion_image_1 !== '')
-						<img  class="content_image" data-aos="fade-up" data-aos-duration="3000" src="{{ Voyager::image($promotion_image_1) }}" type="image/png">
-					@endif
-			</div>
-		
-			</div>
-				</div>
-			
-			<p class="text-center promotion_title_1" data-aos="fade-right">
-			@lang('frontend.home_promotion_title_2')
-			</p>	
-			<div class="col-xs-12 col-md-12 content_div">
-			<div data-aos="zoom-out-right" class="content1">
-
-			<div class="col-xs-12 col-md-5 image_class">
-					@php
-					 $promotion_image_2 = Voyager::setting('site.promotion_image_2', '');
-					 @endphp
-					@if($promotion_image_1 !== '')
-						<img  class="content_image" data-aos="fade-up" data-aos-duration="3000" src="{{ Voyager::image($promotion_image_2) }}" type="image/png">
+						<img  class="content_image" data-aos="fade-left"
+                              data-aos-anchor="#example-anchor"
+                              data-aos-offset="500"
+                              data-aos-duration="500" src="{{ Voyager::image($promotion_image_1) }}" type="image/png">
 					@endif
 			</div>
 
-
-			<div class="col-xs-12 col-md-7">
-			<p class="promotion_content_1">	@lang('frontend.home_promotion_content_1')</p>
-			</div>
-		
-		
 			</div>
 				</div>
-				
-				
+                </div>
+
 					</div>
-					
+
         </div>
     </div>
 
