@@ -7,6 +7,7 @@ use TCG\Voyager\Models\Post;
 use App\AskingQuery;
 use DB;
 use Redirect;
+use Auth;
 class HomeController extends Controller
 {
     public function home(){
@@ -15,6 +16,10 @@ class HomeController extends Controller
             ->join('categories', 'categories.id', '=', 'posts.category_id')
             ->where('posts.status', '=', 'PUBLISHED')
 			->orderBy('posts.id', 'desc')->get();
+			
+  
+           // return $user->hasPermission('browse_admin') ? $next($request) : redirect('/');
+        //}
 		
         return view('app', ['posts' => $posts]);
     }

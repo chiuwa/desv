@@ -2,6 +2,7 @@
 
 return [
     'home'=>'Home',
+	'logout'=>'Logout',
     'services'=>'Services',
     'product'=>'Product',
     'design'=>'Design',

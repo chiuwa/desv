@@ -37,16 +37,20 @@ try {
 }
 
 Route::group(['prefix' => LaravelLocalization::setLocale(),  'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function() {
-   Route::get('/','HomeController@home');
-
-    Auth::routes();
+	Route::group(['before'=>'auth'], function(){
+			Route::get('logout', 'LoginController@logout');
+			});
+    Route::get('/','HomeController@home');
 
     Route::get('/home', 'HomeController@home')->name('home');
 	Route::get('/blog/view/{id}', 'BlogController@home');
 	Route::post('/asking', 'HomeController@asking')->name('asking');
+
+	Route::get('login', 'LoginController@show');
+	Route::post('login', 'LoginController@login');
 });
 
-
+	Auth::routes();
 
 
 

@@ -13,9 +13,9 @@ use TCG\Voyager\Models\Setting;
     <meta name="keywords" content="" />
     <meta name="author" content="" />
 
-    @yield('social')
+
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
-    <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"-->
+
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
@@ -56,14 +56,19 @@ use TCG\Voyager\Models\Setting;
 					@if($admin_favicon !== '')
 						<img  class="desv_image" src="{{ Voyager::image($admin_favicon) }}" type="image/png">
 					@endif
+					
 					 </div>
                     </div>
 
-        <div  data-aos="fade-right" class="col-xs-5 col-md-6 text-right pull-right lang">
-		<div>
-		@php $i = 0 ; @endphp
-        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                      @if($i !== 0 )
+					<div  data-aos="fade-right" class="col-xs-5 col-md-6 text-right pull-right lang">
+					@if(Auth::check())
+								{{ Auth::user()->name}}
+								<a href="logout">@lang('frontend.logout')</a>
+								@endif
+					<div>
+					@php $i = 0 ; @endphp
+					@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+								  @if($i !== 0 )
 						<span> | </span>
 						@endif
                         <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
@@ -71,6 +76,7 @@ use TCG\Voyager\Models\Setting;
                         </a>
 							@php $i = $i+1 ; @endphp
                 @endforeach
+					
 		</div>
 
                    </div>
@@ -100,71 +106,6 @@ use TCG\Voyager\Models\Setting;
     </nav>
 
     @yield('main_page')
-
-    @yield('blog_single')
-
-    <div id="colorlib-container" style="min-height: 500px;">
-        <div class="container">
-            @yield('content')
-
-            <div class="row">
-
-
-                <div class="content_full">
-                <p class="text-center promotion_title_1" data-aos="fade-right">
-                    @lang('frontend.home_promotion_title_2')
-                </p>
-                <div class="col-xs-12 col-md-12 content_div">
-                    <div data-aos="zoom-out-right" class="content1">
-
-                        <div class="col-xs-12 col-md-5 image_class">
-                            @php
-                                $promotion_image_2 = Voyager::setting('site.promotion_image_2', '');
-                            @endphp
-                            @if($promotion_image_2 !== '')
-                                <img  class="content_image" data-aos="fade-right"
-                                      data-aos-anchor="#example-anchor"
-                                      data-aos-offset="500"
-                                      data-aos-duration="500" src="{{ Voyager::image($promotion_image_2) }}" type="image/png">
-                            @endif
-                        </div>
-                        <div class="col-xs-12 col-md-7">
-                            <p class="promotion_content_1">	@lang('frontend.home_promotion_content_2')</p>
-                        </div>
-                    </div>
-                </div>
-                    </div>
-
-                <div  class="content_full">
-			<p class="text-center promotion_title_1" data-aos="fade-right">
-			@lang('frontend.home_promotion_title_1')
-			</p>
-			<div class="col-xs-12 col-md-12 content_div">
-			<div data-aos="zoom-out-right" class="content1">
-
-			<div class="col-xs-12 col-md-7">
-			<p class="promotion_content_1">	@lang('frontend.home_promotion_content_1')</p>
-			</div>
-			<div class="col-xs-12 col-md-5 image_class">
-					@php
-					 $promotion_image_1 = Voyager::setting('site.promotion_image_1', '');
-					 @endphp
-					@if($promotion_image_1 !== '')
-						<img  class="content_image" data-aos="fade-left"
-                              data-aos-anchor="#example-anchor"
-                              data-aos-offset="500"
-                              data-aos-duration="500" src="{{ Voyager::image($promotion_image_1) }}" type="image/png">
-					@endif
-			</div>
-
-			</div>
-				</div>
-                </div>
-
-					</div>
-
-        </div>
-    </div>
 
     <footer  role="contentinfo">
     <div  class="col-md-12 footer">

@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
  .breadcrumbs {
-	     margin-top: 100px;
+	     margin-top: 150px;
  }
 
   .js-colorlib-nav-toggle{
@@ -289,7 +289,10 @@ h1, h2, h3, h4, h5, h6, figure {
 .content_div{
 	border-bottom:1px solid #f0f0f0;
 }
-
+.login_page{
+	margin-top:100px;
+	min-height:400px;
+}
 .footer{
     background-color: #2f5c6f ;
 }
