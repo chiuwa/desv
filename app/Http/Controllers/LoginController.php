@@ -8,6 +8,8 @@ use DB;
 use Redirect;
 use Auth;
 use View;
+use Illuminate\Support\Facades\Validator;
+use Input;
 class LoginController extends Controller {
 
     public function show()
@@ -15,36 +17,35 @@ class LoginController extends Controller {
     return View::make('admin.login');
     }
 
-    public function login()
+    public function login(Request $request)
     {
-	$input = Input::all();
-
-    $rules = ['email'=>'required|email',
-              'password'=>'required'
-              ];
-
-    $validator = Validator::make($input, $rules);
-
-    if ($validator->passes()) {
-        $attempt = Auth::attempt([
-            'email' => $input['email'],
-            'password' => $input['password']
+        $validator = Validator::make($request->all(), [
+            'email' => 'bail|required|email',
+            'password' => 'bail|required',
         ]);
 
-        if ($attempt) {
-            return Redirect::intended('post');
+        if ($validator->passes()) {
+            $attempt = Auth::attempt([
+                'email' => $request->email,
+                'password' => $request->password
+            ]);
+
+            if ($attempt) {
+                return Redirect::intended('home');
+            }
+
+            return Redirect::to('login')
+                ->withErrors(['fail' => 'Email or password is wrong']);
         }
 
-        return Redirect::to('login')
-                ->withErrors(['fail'=>'Email or password is wrong!']);
-    }
-
-    //fails
-    return Redirect::to('login')
+        //fail
+        if ($validator->fails()) {
+            return Redirect::to('login')
                 ->withErrors($validator)
-                ->withInput(Input::except('password'));
+                ->withInput();
+            //;
+        }
     }
-
     public function logout()
     {
 	Auth::logout();

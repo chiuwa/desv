@@ -17,6 +17,8 @@ use TCG\Voyager\Models\Setting;
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Icomoon Icon Fonts-->
@@ -48,38 +50,39 @@ use TCG\Voyager\Models\Setting;
         <div class="top-menu">
             <div class="container">
                 <div class="row">
-                    <div  data-aos="fade-right" class="col-xs-5 logo_dw">
-					 <div class="logo col-md-4 col-sm-6 col-xs-7 ">
+
+					 <div class="logo logo_dw col-md-2  col-xs-4 ">
 					 @php
 					 $admin_favicon = Voyager::setting('site.logo', '');
 					 @endphp
 					@if($admin_favicon !== '')
-						<img  class="desv_image" src="{{ Voyager::image($admin_favicon) }}" type="image/png">
+                             <a href="/"><img   class="desv_image" src="{{ Voyager::image($admin_favicon) }}" type="image/png"></a>
 					@endif
-					
+
 					 </div>
-                    </div>
 
-					<div  data-aos="fade-right" class="col-xs-5 col-md-6 text-right pull-right lang">
+
+					<div  data-aos="fade-right" class="col-xs-6 col-md-6 text-right pull-right lang">
+
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            @if(App::getLocale()!==$localeCode)
+                                <a  class="lung_big_nav" style="margin-right: 10px" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                            @endif
+                        @endforeach
+
+
 					@if(Auth::check())
-								{{ Auth::user()->name}}
-								<a href="logout">@lang('frontend.logout')</a>
-								@endif
-					<div>
-					@php $i = 0 ; @endphp
-					@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-								  @if($i !== 0 )
-						<span> | </span>
-						@endif
-                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                            {{ $properties['native'] }}
-                        </a>
-							@php $i = $i+1 ; @endphp
-                @endforeach
-					
-		</div>
+                        <div class="user_nav">
+                                <label>{{ Auth::user()->name}}</label>
+					<a href="logout">@lang('frontend.logout')</a>
+                        </div>
+                        @else
+                            <a href="/login" class="btn btn-outline-info login_button">@lang('frontend.service_platform')</a>
+					@endif
 
-                   </div>
+		</div>
                 </div>
             </div>
         </div>
@@ -100,11 +103,19 @@ use TCG\Voyager\Models\Setting;
                             <li class="navbar_li"><a href="travel.html">@lang('frontend.design')</a></li>
                             <li class="navbar_li"><a href="about.html">@lang('frontend.develop') </a></li>
                            <li class="navbar_li"><a href="contact.html">@lang('frontend.contact')</a></li>
+                           @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                               @if(App::getLocale()!==$localeCode)
+                                   <li class="navbar_li lung_nav"> <a  style="margin-right: 10px" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                       {{ $properties['native'] }}
+                                   </a></li>
+                               @endif
+                           @endforeach
                         </ul>
 
         </div>
     </nav>
-
+</div>
+</div>
     @yield('main_page')
 
     <footer  role="contentinfo">

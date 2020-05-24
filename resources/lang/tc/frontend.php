@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'service_platform'=>'自助平台',
     'home'=>'主頁',
 	'logout'=>'登出',
     'services'=>'服務',

@@ -22,7 +22,7 @@ body {
   position: relative;
   overflow-x: hidden;
   width: 100%;
-  height: 100%;
+
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -74,13 +74,22 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
  .breadcrumbs {
-	     margin-top: 150px;
+	 margin-top: 150px;
  }
 
   .js-colorlib-nav-toggle{
 	      position: fixed !important;
   }
 
+.lung_nav{
+    display: none  !important;
+}
+.lung_nav a{
+    color: #F6490D !important;
+}
+.user_nav{
+    float: right;
+}
 
 @media screen and (max-width: 1250px) {
 .contact_info{
@@ -115,12 +124,21 @@ h1, h2, h3, h4, h5, h6, figure {
     margin: 0;
 	}
 	.lang{
-		margin-right: 65px;
-		margin-top:15px !important;
+		margin-right: 40px;
+		margin-top:8px !important;
 	}
 	.logo_dw{
-	  margin: 8.75px -15px;
+	  margin-top: 10px;
   }
+    .lung_big_nav{
+        display: none !important;
+    }
+    .breadcrumbs {
+        margin-top: 100px!important;
+    }
+    .user_nav{
+        margin-top: 5px;
+    }
 .contact_info{
   margin: auto;
   width: 100% !important;
@@ -150,6 +168,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	right:10%!important;
 	left: 10%!important;
 }
+.lung_nav{
+    display: block !important;
+}
 }
 @media screen and (max-width: 500px) {
     .username{
@@ -169,8 +190,8 @@ h1, h2, h3, h4, h5, h6, figure {
     }
     .contact_desc{
         font-size: 14px!important;
-
     }
+
 }
 @media screen and (max-width: 320px) {
     .username{
@@ -185,6 +206,7 @@ h1, h2, h3, h4, h5, h6, figure {
     .footer-up{
         min-height: 670px!important;
     }
+
 }
 
 @media (min-width: 1250px) and (max-width: 2190px) {
@@ -218,7 +240,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .submit_button{
 	margin: auto;
-	width: 20% !important;
+	width: 18% !important;
 }
     .contact_info{
 
@@ -253,7 +275,7 @@ h1, h2, h3, h4, h5, h6, figure {
     min-height: 250px;
 }
 .content1{
- margin: auto;
+    margin: auto;
 	display: flex;
   justify-content: center;
   align-items: center;
@@ -275,6 +297,12 @@ h1, h2, h3, h4, h5, h6, figure {
 .desv_image{
 	width: 100%;
 }
+.login_button{
+    color: #17a2b8;
+    border: 1px solid #17a2b8;;
+    background-color: transparent;
+    background-image: none;
+}
 .content_image{
 	width: 70%;
 
@@ -290,8 +318,8 @@ h1, h2, h3, h4, h5, h6, figure {
 	border-bottom:1px solid #f0f0f0;
 }
 .login_page{
-	margin-top:100px;
-	min-height:400px;
+	margin-top:150px;
+    margin-bottom:100px;
 }
 .footer{
     background-color: #2f5c6f ;
@@ -398,7 +426,129 @@ height:100px;
 	text-align: center;
 	margin-top: 20px;
 }
+/*login page */
+.login_submit_button{
+    margin-bottom: 50px;
+    display: flex;
+}
 
+.login100-form-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    background: #6675df;
+
+    font-family: Montserrat-Bold;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+
+    margin-bottom: 50px;
+
+}
+.login100-form-btn:hover {
+    background: #333333;
+}
+
+.login_main {
+    background-color: #FFFFFF;
+    min-height: 300px;
+    height:auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+}
+
+.sign {
+    padding-top: 40px;
+    color: #8C55AA;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+    width: 100%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 45px;
+}
+
+
+.pass {
+    width: 100%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+
+}
+
+.login_submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+    .validate-input {
+    position: relative;
+}
 .popup_model{
   background-color: inherit;
   height: 230px!important;

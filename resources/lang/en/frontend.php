@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'service_platform'=>'Service Platform',
     'home'=>'Home',
 	'logout'=>'Logout',
     'services'=>'Services',

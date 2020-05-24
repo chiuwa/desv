@@ -48,9 +48,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),  'middleware' => ['l
 
 	Route::get('login', 'LoginController@show');
 	Route::post('login', 'LoginController@login');
+
 });
 
-	Auth::routes();
+
 
 
 
