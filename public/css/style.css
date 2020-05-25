@@ -90,7 +90,16 @@ h1, h2, h3, h4, h5, h6, figure {
 .user_nav{
     float: right;
 }
-
+ .lung_big_nav{
+    display: none !important;
+    }	
+	
+@media (min-width: 769px)  and (max-width: 4500px) {
+		 .lung_big_nav{
+        display: inline !important;
+		}
+}	
+	
 @media screen and (max-width: 1250px) {
 .contact_info{
   margin: auto;
@@ -130,9 +139,6 @@ h1, h2, h3, h4, h5, h6, figure {
 	.logo_dw{
 	  margin-top: 10px;
   }
-    .lung_big_nav{
-        display: none !important;
-    }
     .breadcrumbs {
         margin-top: 100px!important;
     }

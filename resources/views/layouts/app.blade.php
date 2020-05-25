@@ -18,7 +18,6 @@ use TCG\Voyager\Models\Setting;
 
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <!-- Icomoon Icon Fonts-->
@@ -115,7 +114,7 @@ use TCG\Voyager\Models\Setting;
         </div>
     </nav>
 </div>
-</div>
+
     @yield('main_page')
 
     <footer  role="contentinfo">
@@ -194,7 +193,7 @@ use TCG\Voyager\Models\Setting;
 
 
     </footer>
-</div>
+
 
 <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
