@@ -107,12 +107,12 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	.contact_desc{
   margin: auto;
-  width: 45% !important;
+  width: 50% !important;
 	}
 
 	.name_title_div{
 	 margin: auto;
-	width: 60% !important;
+	width: 55% !important;
 
 }
 .email_phone{
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .submit_button{
 	margin: auto;
-	width: 60% !important;
+	width: 50% !important;
 }
 
 }
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6, figure {
     }
 .contact_info{
   margin: auto;
-  width: 100% !important;
+  width:95% !important;
 	}
 	.contact_desc{
   margin: auto;
@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 500px) {
     .username{
-        width: 45%!important;
+        width: 43%!important;
     }
     .phone{
         width: 45%!important;
@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 }
 
-@media (min-width: 1250px) and (max-width: 2190px) {
+@media (min-width: 1250px) and (max-width: 1350px) {
 
 .name_title_div{
 	 margin: auto;
@@ -229,11 +229,51 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .submit_button{
 	margin: auto;
-	width: 36% !important;
+	width: 35% !important;
+}
+}
+@media (min-width: 1351px) and (max-width: 1699px) {
+.contact_info {
+	width: 25% !important;
+}
+.name_title_div{
+	 margin: auto;
+	width: 30% !important;
+
+}
+.email_phone{
+	margin: auto;
+	width: 30% !important;
+	margin-top: 20px;
+}
+.submit_button{
+	margin: auto;
+	width: 28% !important;
+}
+}
+@media (min-width: 1700px) and (max-width: 2199px) {
+.contact_info {
+	width: 23% !important;
+}
+.name_title_div{
+	 margin: auto;
+	width: 23% !important;
+
+}
+.email_phone{
+	margin: auto;
+	width: 23% !important;
+	margin-top: 20px;
+}
+.submit_button{
+	margin: auto;
+	width: 22% !important;
 }
 }
 @media (min-width: 2200px) and (max-width: 4500px) {
-
+.contact_info {
+	width: 25% !important;
+}
 .name_title_div{
 	 margin: auto;
 	width: 20% !important;
