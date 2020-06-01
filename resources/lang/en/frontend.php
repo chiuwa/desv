@@ -5,6 +5,7 @@ return [
     'home'=>'Home',
 	'logout'=>'Logout',
     'services'=>'Services',
+    'services_package'=>'Services Package',
     'product'=>'Product',
     'design'=>'Design',
     'develop'=>'Develop',

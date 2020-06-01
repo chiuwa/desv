@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
  .breadcrumbs {
 	 margin-top: 150px;
+     margin-bottom: 150px;
  }
 
   .js-colorlib-nav-toggle{
@@ -365,11 +366,14 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .common_main_div{
-	margin-top:650px;
+	margin-top:250px;
 	margin-bottom:100px;
 }
 .service_div{
-	border:1px solid #f0f0f0;
+	border:10px solid ;
+    height: 350px;
+    margin: 40px;
+    border-radius: 40px;
 }
 .footer{
     background-color: #2f5c6f ;

@@ -92,7 +92,7 @@ use TCG\Voyager\Models\Setting;
                            <li class="has-dropdown navbar_li">
                               <a href="/service">@lang('frontend.services')</a>
                                <ul class="dropdown">
-                                   <li><a href="#">@lang('frontend.services')</a></li>
+                                   <li><a href="#">@lang('frontend.services_package')</a></li>
                                    <li><a href="#">@lang('frontend.services')</a></li>
                                    <li><a href="#">@lang('frontend.services')</a></li>
                                    <li><a href="#">@lang('frontend.services')</a></li>

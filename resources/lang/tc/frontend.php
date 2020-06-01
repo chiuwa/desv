@@ -5,6 +5,7 @@ return [
     'home'=>'主頁',
 	'logout'=>'登出',
     'services'=>'服務',
+    'services_package'=>'套餐服務',
     'product'=>'產品',
     'design'=>'設計',
     'develop'=>'開發',
