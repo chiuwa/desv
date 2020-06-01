@@ -92,14 +92,14 @@ h1, h2, h3, h4, h5, h6, figure {
 }
  .lung_big_nav{
     display: none !important;
-    }	
-	
+    }
+
 @media (min-width: 769px)  and (max-width: 4500px) {
 		 .lung_big_nav{
         display: inline !important;
 		}
-}	
-	
+}
+
 @media screen and (max-width: 1250px) {
 .contact_info{
   margin: auto;
@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .common_main_div{
-	margin-top:250px;
+	margin-top:650px;
 	margin-bottom:100px;
 }
 .service_div{
