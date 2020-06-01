@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title',setting('site.title') ." | ". __("services_package"))
+@section('title',setting('site.title') ." | ". __('frontend.services_package'))
 
 
 @section('main_page')
