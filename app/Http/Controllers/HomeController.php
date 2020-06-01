@@ -34,6 +34,18 @@ class HomeController extends Controller
 		exit();
 	}
 	
+	    public function service(){
+
+     
+		
+        return view('service');
+    }
+	
+	
+	
+	
+	
+	
 		public function asking(Request $request){
 		// $this->validate($request, [
             // 'email' => 'required',

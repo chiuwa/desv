@@ -363,9 +363,13 @@ h1, h2, h3, h4, h5, h6, figure {
 .content_div{
 	border-bottom:1px solid #f0f0f0;
 }
-.login_page{
-	margin-top:150px;
-    margin-bottom:100px;
+
+.common_main_div{
+	margin-top:250px;
+	margin-bottom:100px;
+}
+.service_div{
+	border:1px solid #f0f0f0;
 }
 .footer{
     background-color: #2f5c6f ;
