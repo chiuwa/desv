@@ -3,6 +3,8 @@
 return [
     'service_platform'=>'自助平台',
     'home'=>'主頁',
+    'login'=>'登入',
+    'register'=>'註冊平台賬戶',
 	'logout'=>'登出',
     'services'=>'服務',
     'services_package'=>'套餐服務',

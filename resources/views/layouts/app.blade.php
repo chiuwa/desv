@@ -15,30 +15,30 @@ use TCG\Voyager\Models\Setting;
 
 
 <!--   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
- -->
+-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-  <!-- Icomoon Icon Fonts-->
-  <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
-  <!-- Bootstrap  -->
-  <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
-  <!-- Flexslider  -->
-  <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
-  <!-- Owl Carousel -->
-  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+<!-- Animate.css -->
+<link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+<!-- Flexslider  -->
+<link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
 
-  <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-  <!-- Theme style  -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <!-- Modernizr JS -->
-  <script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
-  <!-- FOR IE9 below -->
+<link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+<!-- Theme style  -->
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<!-- Modernizr JS -->
+<script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
+<!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="{{ asset('js/respond.min.js') }}"></script>
   <![endif]-->
@@ -125,74 +125,82 @@ use TCG\Voyager\Models\Setting;
       <div class="footer_title">
         <label>@lang('frontend.contact')</label>
       </div>
-        <div class="contact_desc">
+      <div class="contact_desc">
         <label> @lang('frontend.contact_desc')</label>
-        </div>
+      </div>
 
       <div class="row ">
 
-      <div class="col-md-5">         
-        <br>   
-        <p class="icn" style="color: #fff"> <i class="fa fa-phone"></i> &nbsp;&nbsp; @php echo(' '.Voyager::setting('site.phone'));  @endphp </p>
-        <p class="icn" style="color: #fff"><i class="fa fa-envelope"></i> &nbsp;&nbsp; @php echo(' '.Voyager::setting('site.email'));  @endphp </p>
+        <div class="col-md-5">         
+          <br>   
+          <p class="icn" style="color: #fff"> <i class="fa fa-phone"></i> &nbsp;&nbsp; @php echo(' '.Voyager::setting('site.phone'));  @endphp </p>
+          <p class="icn" style="color: #fff"><i class="fa fa-envelope"></i> &nbsp;&nbsp; @php echo(' '.Voyager::setting('site.email'));  @endphp </p>
 
-        <hr>
+          <hr>
 
-        <div class="media">
-          <ul class="list-unstyled">
-            <li><a href="#"><i class="fab fa-facebook-f"></a></i></li>
-            <li><a href="#"> <i class="fab fa-instagram"> </i></a>  </li>
+          <div class="media">
+            <ul class="list-unstyled">
+              <li><a href="#"><i class="fab fa-facebook-f"></a></i></li>
+              <li><a href="#"> <i class="fab fa-instagram"> </i></a>  </li>
               <li><a href="#"><i class="fab fa-whatsapp"></i> </a>  </li> 
-            <li><a href="#"> <i class="fab fa-github"> </i> </a>  </li>
-            <li><a href="#"> <i class="fab fa-aws"></i> </a>  </li>
+              <li><a href="#"> <i class="fab fa-github"> </i> </a>  </li>
+              <li><a href="#"> <i class="fab fa-aws"></i> </a>  </li>
 
-          </ul>
+            </ul>
+          </div>
+
         </div>
 
-        </div>
-
-   <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
 
         <div class="col-md-6">
           {!! Form::open(array('action' => 'HomeController@asking')) !!}
+          <div class="row">
+           <div class="col-md-6">
+            <div class=" title_div">
 
-          <div class=" title_div">
+              <label class="radio-inline title_redio">{!! Form::radio('title', "mr", null,['required']) !!}Mr.</label>
 
-          <label class="radio-inline title_redio">{!! Form::radio('title', "mr", null,['required']) !!}Mr.</label>
+              <label class="radio-inline title_redio">{!! Form::radio('title', "mrs", null) !!}Mrs.</label>
 
-          <label class="radio-inline title_redio">{!! Form::radio('title', "mrs", null) !!}Mrs.</label>
+              <label class="radio-inline title_redio">{!! Form::radio('title', "miss", null) !!}Miss</label>
 
-          <label class="radio-inline title_redio">{!! Form::radio('title', "miss", null) !!}Miss</label>
+            </div>   
 
           </div>
-          
+          <div class="col-md-6">
            {!! Form::text('name', null, array('placeholder'=>' Surname','class'=>'form_text','required'=>'true')) !!}
- 
-            {!! Form::email('email', null, array('placeholder'=>' Email','class'=>'form_text','required'=>'true')) !!}
-
-            {!! Form::text('phone', null, array('placeholder'=>' Phone (Option)','class'=>'form_text')) !!}
- 
-            @php
-            $query_types = ['web_site'=>'WebSite Develope','design'=>'Design','start_up'=>'Start Up Plan','other'=>'Other'];
-            @endphp
-            {!! Form::select('query_type_name',$query_types, null, array('placeholder'=>' Query Type','class' => 'form-control query_type ','required'=>'true')) !!}
-
-           {!! Form::textarea('query_question', null, ['placeholder'=>'Any Question?','required'=>'true','id' => 'query_question', 'rows' => 4]) !!}
-     
-            <div class="submit_button">
-              {{Form::submit('Submit', ['class' => 'btn btn-info cus_submit_button'])}}
-            </div>
+         </div>
+         <div class="col-md-6">
+          {!! Form::email('email', null, array('placeholder'=>' Email','class'=>'form_text','required'=>'true')) !!}
+        </div>
+        <div class="col-md-6">
+          {!! Form::text('phone', null, array('placeholder'=>' Phone (Option)','class'=>'form_text')) !!}
+        </div>
+        <div class="col-md-12">
+          @php
+          $query_types = ['web_site'=>'WebSite Develope','design'=>'Design','start_up'=>'Start Up Plan','other'=>'Other'];
+          @endphp
+          {!! Form::select('query_type_name',$query_types, null, array('placeholder'=>' Query Type','class' => 'form-control query_type ','required'=>'true')) !!}
+        </div>
+        <div class="col-md-12">
+         {!! Form::textarea('query_question', null, ['placeholder'=>'Any Question?','required'=>'true','id' => 'query_question', 'rows' => 4]) !!}
+       </div>
+       <div class="col-md-12 submit_button">
+        {{Form::submit('Submit', ['class' => 'btn btn-info cus_submit_button'])}}
+      </div>
 
       {!!  Form::close() !!}
-        </div>
-      </div>
     </div>
   </div>
+</div>
+</div>
+</div>
 
-  <div  class="footer-copyright">
-    <label>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</label>
+<div  class="footer-copyright">
+  <label>Copyright © @php $admin_title = Voyager::setting('site.title'); echo ( now()->year); print_r (' '. $admin_title) @endphp All Rights Reserved</label>
 
-  </div>
+</div>
 </footer>
 
 
