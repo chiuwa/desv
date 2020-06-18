@@ -5,6 +5,8 @@ return [
     'home'=>'Home',
     'login'=>'Login',
     'register'=>'Register a platform account',
+    'client'=>'Client',
+    'staff'=>'Staff',
 	'logout'=>'Logout',
     'services'=>'Services',
     'services_package'=>'Services Package',

@@ -46,6 +46,66 @@ class LoginController extends Controller {
             //;
         }
     }
+    public function client_register(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email' => 'bail|required|email',
+            'password' => 'bail|required',
+        ]);
+
+        if ($validator->passes()) {
+            $attempt = Auth::attempt([
+                'email' => $request->email,
+                'password' => $request->password
+            ]);
+
+            if ($attempt) {
+                return Redirect::intended('home');
+            }
+
+            return Redirect::to('login')
+                ->withErrors(['fail' => 'Email or password is wrong']);
+        }
+
+        //fail
+        if ($validator->fails()) {
+            return Redirect::to('login')
+                ->withErrors($validator)
+                ->withInput();
+            //;
+        }
+    }
+
+        public function staff_register(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email' => 'bail|required|email',
+            'password' => 'bail|required',
+        ]);
+
+        if ($validator->passes()) {
+            $attempt = Auth::attempt([
+                'email' => $request->email,
+                'password' => $request->password
+            ]);
+
+            if ($attempt) {
+                return Redirect::intended('home');
+            }
+
+            return Redirect::to('login')
+                ->withErrors(['fail' => 'Email or password is wrong']);
+        }
+
+        //fail
+        if ($validator->fails()) {
+            return Redirect::to('login')
+                ->withErrors($validator)
+                ->withInput();
+            //;
+        }
+    }
+
     public function logout()
     {
 	Auth::logout();

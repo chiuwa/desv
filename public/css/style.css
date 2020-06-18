@@ -14,7 +14,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 2;
-  font-family:  Candara, Arial, sans-serif;
+  font-family:  Ubuntu,Candara, Arial, sans-serif;
   color: #666666;
   background: #fff; }
 
@@ -421,7 +421,10 @@ body {
   margin-bottom: 27px;
   font-family: 'Ubuntu', sans-serif;
 }
-
+.option_list{
+   border: none;
+  border-radius: 20px !important;
+}
 
 .un:focus, .pass:focus {
   border: 2px solid rgba(0, 0, 0, 0.18) !important;
