@@ -6,7 +6,7 @@ return [
     'login'=>'Login',
     'register'=>'Register a platform account',
     'client'=>'Client',
-    'staff'=>'Staff',
+    'staff'=>'Freelancers',
 	'logout'=>'Logout',
     'services'=>'Services',
     'services_package'=>'Services Package',

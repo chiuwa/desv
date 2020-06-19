@@ -6,7 +6,7 @@ return [
     'login'=>'登入',
     'register'=>'註冊平台賬戶',
     'client'=>'客戶',
-    'staff'=>'員工',
+    'staff'=>'自由工作者',
 	'logout'=>'登出',
     'services'=>'服務',
     'services_package'=>'套餐服務',
