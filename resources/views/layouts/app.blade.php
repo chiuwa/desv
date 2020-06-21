@@ -90,17 +90,16 @@ use TCG\Voyager\Models\Setting;
       <div  data-aos="zoom-in" class="col-xs-12 text-center menu-1" >
        <ul class="navbar_ul">
         <li class="active navbar_li"><a href="/">@lang('frontend.home')</a></li>
-        <li class="navbar_li"><a href="/product/index">@lang('frontend.product')</a></li>
         <li class="has-dropdown navbar_li">
           <a href="/service">@lang('frontend.services')</a>
           <ul class="dropdown">
-           <li><a href="#">@lang('frontend.services_package')</a></li>
+           <li><a href="/service">@lang('frontend.services_package')</a></li>
            <li><a href="#">@lang('frontend.services')</a></li>
            <li><a href="#">@lang('frontend.services')</a></li>
            <li><a href="#">@lang('frontend.services')</a></li>
          </ul>
        </li>
-
+        <li class="navbar_li"><a href="/platform/index">@lang('frontend.platform')</a></li>
        <li class="navbar_li"><a href="travel.html">@lang('frontend.design')</a></li>
        <li class="navbar_li"><a href="about.html">@lang('frontend.develop') </a></li>
        <li class="navbar_li"><a href="contact.html">@lang('frontend.contact')</a></li>
