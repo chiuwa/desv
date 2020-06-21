@@ -9,17 +9,9 @@
 			<div class="common_main_div">
 				<div class="col-md-3 col-sm-3 service_div" data-aos="zoom-out-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
 					<div class="service_title">
-						<span>Intern</span>
+						<span>@lang('frontend.intern')</span>
 					</div>
-				
-					<div class="service_price_primary">
-						<span class="service_price">
-							$220
-						</span>
-						<span class="service_per_month">
-							/month
-						</span>
-					</div>
+			
 					<div class="service_desc">
 						<ul class="service_desc_extra">
 							<li>由專業既大屌毅操刀</li>
@@ -28,6 +20,15 @@
 							<li>價錢主要看臉</li>
 							<li>樣衰收貴D，好似我咁樣就FREE PAY</li>
 						</ul>
+					</div>
+
+							<div class="service_price_primary">
+						<span class="service_price">
+							$220
+						</span>
+						<span class="service_per_month">
+							/month
+						</span>
 					</div>
 					<div class="service_apply">
 						<a href="#">APPLY</a>
