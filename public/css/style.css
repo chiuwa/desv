@@ -252,14 +252,16 @@ body {
     flex-wrap: wrap;
     align-items: baseline;
     flex-basis: 50%;
+    margin-bottom: 15px;
   }
   .service_price{
     font-weight: bold;
-    font-size: 40px;
-    color: blue;
+    font-size: 15px;
+    color: red;
   }
   .service_per_month{
-    font-size: 20px;
+    font-size: 15px;
+    font-weight: bold;
   }
   .service_desc{
     margin-top:25px;
@@ -279,6 +281,23 @@ body {
     padding-bottom: 16px;
   }
 
+  .service_desc_other{
+    margin-top:25px;
+  }
+  .service_desc_other ul{
+    padding: 0;
+    list-style: none;
+  }
+
+  .service_desc_other li {
+    width: 100%;
+    text-align: left;
+    padding-left: 60px;
+    background-image: url(https://img.icons8.com/fluent/24/000000/assignment-late.png);
+    background-position: 10px 0px;
+    background-repeat: no-repeat;
+    padding-bottom: 16px;
+  }
 
   .service_apply{
     background: white;
@@ -405,7 +424,6 @@ body {
   height: 50px;
   border-radius: 20px;
   background: #6675df;
-
   font-family: Montserrat-Bold;
   font-size: 12px;
   color: #fff;
@@ -416,7 +434,6 @@ body {
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-
   margin-bottom: 50px;
 
 }
@@ -436,6 +453,15 @@ body {
 .login_main_2 {
   background-color: #FFFFFF;
   min-height: 380px;
+  height:auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+
+}
+
+.login_main_3 {
+  background-color: #FFFFFF;
+  min-height: 520px;
   height:auto;
   border-radius: 1.5em;
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
