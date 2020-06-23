@@ -22,4 +22,5 @@ return [
     'intern'=>'Intern Plan',
     'low_lv_plan'=>'Basic Plan',
     'full_lv_plan'=>'Standard Plan',
+    'free_quota'=>'Get a free quote',
 ];

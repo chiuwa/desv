@@ -22,5 +22,6 @@ return [
     'intern'=>'煙腸實習Plan',
     'low_lv_plan'=>'入門Plan',
     'full_lv_plan'=>'標準Plan',
+    'free_quota'=>'獲得免費報價',
 
 ];

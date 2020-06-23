@@ -8,11 +8,11 @@
 <div class="container">
   <div class="row">
     <div class="common_main_div">
-       <div class="col-md-12 text-center">
+     <!--   <div class="col-md-12 text-center">
           <label>@lang('frontend.service_platform')</label>
           <hr>
           <br>
-      </div>
+      </div> -->
 
       <div class="col-md-6">
           <div class="text-center">
