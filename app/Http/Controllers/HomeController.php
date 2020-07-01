@@ -41,6 +41,13 @@ class HomeController extends Controller
         return view('service');
     }
 	
+	    public function platform(){
+
+     
+		
+        return view('platform');
+    }
+	
 	
 	
 	
