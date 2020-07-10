@@ -45,7 +45,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),  'middleware' => ['l
     Route::get('/home', 'HomeController@home')->name('home');
     Route::get('/blog/view/{id}', 'BlogController@home');
     Route::post('/asking', 'HomeController@asking')->name('asking');
-
+    Route::post('/plan_asking', 'HomeController@plan_asking')->name('plan_asking');
     Route::get('login', 'LoginController@show');
     Route::post('login', 'LoginController@login');
     Route::post('client_register', 'LoginController@client_register');

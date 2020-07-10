@@ -122,25 +122,25 @@
 				
 				
             <div class="content_full">
-                <p class="text-center promotion_title_1" data-aos="fade-right">
-                    @lang('frontend.home_promotion_title_1')
+                <p class="text-center promotion_title_3" data-aos="fade-right">
+                    @lang('frontend.home_promotion_title_3')
                 </p>
                 <div class="col-xs-12 col-md-12 content_div">
                     <div data-aos="zoom-out-right" class="content1">
 
                         <div class="col-xs-12 col-md-5 image_class">
                             @php
-                                $promotion_image_1 = Voyager::setting('site.promotion_image_1', '');
+                                $promotion_image_3 = Voyager::setting('site.promotion_image_3', '');
                             @endphp
-                            @if($promotion_image_1 !== '')
+                            @if($promotion_image_3 !== '')
                                 <img  class="content_image" data-aos="fade-right"
                                       data-aos-anchor="#example-anchor"
                                       data-aos-offset="500"
-                                      data-aos-duration="500" src="{{ Voyager::image($promotion_image_1) }}" type="image/png">
+                                      data-aos-duration="500" src="{{ Voyager::image($promotion_image_3) }}" type="image/png">
                             @endif
                         </div>
                         <div class="col-xs-12 col-md-7">
-                            <p class="promotion_content_1">	@lang('frontend.home_promotion_content_1')</p>
+                            <p class="promotion_content_3">	@lang('frontend.home_promotion_content_3')</p>
                         </div>
                     </div>
                 </div>
