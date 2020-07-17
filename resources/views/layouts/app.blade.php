@@ -44,14 +44,13 @@ use TCG\Voyager\Models\Setting;
   <![endif]-->
 </head>
 <body>
-
   <div class="colorlib-loader"></div>
-  <div id="page">
+  <div id="page"></div>
     <nav class="colorlib-nav navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="top-menu">
         <div class="container">
           <div class="row">
-
+          <div class="col-md-12  col-xs-12 ">
             <div class="logo logo_dw col-md-2  col-xs-4 ">
               @php
               $admin_favicon = Voyager::setting('site.logo', '');
@@ -63,7 +62,7 @@ use TCG\Voyager\Models\Setting;
             </div>
 
 
-            <div  data-aos="fade-right" class="col-xs-6 col-md-6 text-right pull-right lang">
+            <div  class="col-xs-6 col-md-6 text-right pull-right lang">
 
               @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
               @if(App::getLocale()!==$localeCode)
@@ -84,10 +83,12 @@ use TCG\Voyager\Models\Setting;
               @endif
 
             </div>
+              </div>
           </div>
         </div>
       </div>
-      <div  data-aos="zoom-in" class="col-xs-12 text-center menu-1" >
+
+      <div class="col-xs-12 text-center menu-1" >
        <ul class="navbar_ul">
       <li class="{{ (\Route::currentRouteName() == 'home') ? 'navbar_li active' : 'navbar_li' }}"> <a href="/">@lang('frontend.home')</a></li>
         <li class="{{ (\Route::currentRouteName() == 'service') ? 'has-dropdown navbar_li active' : 'has-dropdown navbar_li' }} ">
@@ -111,7 +112,7 @@ use TCG\Voyager\Models\Setting;
 
    </div>
  </nav>
-</div>
+
 
 @yield('main_page')
 
