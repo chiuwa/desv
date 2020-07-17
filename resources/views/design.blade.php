@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title',setting('site.title') ." | ". __('frontend.platform'))
+@section('title',setting('site.title') ." | ". __('frontend.design'))
 
 
 @section('main_page')
@@ -56,7 +56,7 @@ hr {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jul 31, 2020 15:37:25").getTime();
+var countDownDate = new Date("Jul 31, 2020 23:59:59").getTime();
 
 // Update the count down every 1 second
 var countdownfunction = setInterval(function() {

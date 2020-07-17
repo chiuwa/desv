@@ -10,50 +10,66 @@ use Redirect;
 use Auth;
 class HomeController extends Controller
 {
-    public function home(){
+	public function home(){
 
-        $posts = Post::select('posts.*', 'categories.name', 'posts.id as post_id')
-            ->join('categories', 'categories.id', '=', 'posts.category_id')
-            ->where('posts.status', '=', 'PUBLISHED')
-			->orderBy('posts.id', 'desc')->get();
-			
-  
+		$posts = Post::select('posts.*', 'categories.name', 'posts.id as post_id')
+		->join('categories', 'categories.id', '=', 'posts.category_id')
+		->where('posts.status', '=', 'PUBLISHED')
+		->orderBy('posts.id', 'desc')->get();
+
+
            // return $user->hasPermission('browse_admin') ? $next($request) : redirect('/');
         //}
 		
-        return view('app', ['posts' => $posts]);
-    }
+		return view('app', ['posts' => $posts]);
+	}
 	public static function getCarousel(){
 		
-	 $carousel= DB::table('settings')
-				->select('value')
-				->where('key', 'like', 'site.carousel%')
-				->get();		
-				
+		$carousel= DB::table('settings')
+		->select('value')
+		->where('key', 'like', 'site.carousel%')
+		->get();		
+
 		return $carousel;					
 		exit();
 	}
 	
-	    public function service(){
+	public function service(){
 
-     
-		
-        return view('service');
-    }
+		return view('service');
+	}
 	
-	    public function platform(){
+	public function platform(){
 
-     
-		
-        return view('platform');
-    }
+		return view('platform');
+	}
+	
+
+
+	public function design(){
+
+		return view('design');
+	}
+
+
+
+	public function develop(){
+
+		return view('develop');
+	}
+
+
+
+	public function contact(){
+
+
+		return view('contact');
+	}
 	
 	
 	
 	
-	
-	
-		public function asking(Request $request){
+	public function asking(Request $request){
 		// $this->validate($request, [
             // 'email' => 'required',
             // 'rating' => 'required',
@@ -67,11 +83,11 @@ class HomeController extends Controller
 		$model->asking = $request->query_question;
 		$model->save();
 		if($model->save()){
-		return Redirect::back()->with("modal_message_success", "Submit Success <br> We will reply to you as soon as possible");
+			return Redirect::back()->with("modal_message_success", "Submit Success <br> We will reply to you as soon as possible");
 		}else{
 			return Redirect::back()->with("modal_message_error", "Submit Error");
-			}
-		}	
+		}
+	}	
 
 
 	public function plan_asking(Request $request){
@@ -93,10 +109,10 @@ class HomeController extends Controller
 		
 		$model->save();
 		if($model->save()){
-		return Redirect::back()->with("modal_message_success", "Submit Success <br> We will reply to you as soon as possible");
+			return Redirect::back()->with("modal_message_success", "Submit Success <br> We will reply to you as soon as possible");
 		}else{
 			return Redirect::back()->with("modal_message_error", "Submit Error");
-			}
-		}	
+		}
+	}	
 	
 }

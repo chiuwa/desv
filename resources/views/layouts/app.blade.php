@@ -89,20 +89,17 @@ use TCG\Voyager\Models\Setting;
       </div>
       <div  data-aos="zoom-in" class="col-xs-12 text-center menu-1" >
        <ul class="navbar_ul">
-        <li class="active navbar_li"><a href="/">@lang('frontend.home')</a></li>
-        <li class="has-dropdown navbar_li">
+      <li class="{{ (\Route::currentRouteName() == 'home') ? 'navbar_li active' : 'navbar_li' }}"> <a href="/">@lang('frontend.home')</a></li>
+        <li class="{{ (\Route::currentRouteName() == 'service') ? 'has-dropdown navbar_li active' : 'has-dropdown navbar_li' }} ">
           <a href="/service">@lang('frontend.services')</a>
           <ul class="dropdown">
            <li><a href="/service">@lang('frontend.services_package')</a></li>
-           <li><a href="#">@lang('frontend.services')</a></li>
-           <li><a href="#">@lang('frontend.services')</a></li>
-           <li><a href="#">@lang('frontend.services')</a></li>
          </ul>
        </li>
-        <li class="navbar_li"><a href="/platform/index">@lang('frontend.platform')</a></li>
-       <li class="navbar_li"><a href="travel.html">@lang('frontend.design')</a></li>
-       <li class="navbar_li"><a href="about.html">@lang('frontend.develop') </a></li>
-       <li class="navbar_li"><a href="contact.html">@lang('frontend.contact')</a></li>
+        <li class="{{ (\Route::currentRouteName() == 'platform') ? 'navbar_li active' : 'navbar_li' }}"><a href="/platform">@lang('frontend.platform')</a></li>
+       <li class="{{ (\Route::currentRouteName() == 'design') ? 'navbar_li active' : 'navbar_li' }}"><a href="/design">@lang('frontend.design')</a></li>
+       <li class="{{ (\Route::currentRouteName() == 'develop') ? 'navbar_li active' : 'navbar_li' }}"><a href="/develop">@lang('frontend.develop') </a></li>
+       <li class="{{ (\Route::currentRouteName() == 'contact') ? 'navbar_li active' : 'navbar_li' }}"><a href="/contact">@lang('frontend.contact')</a></li>
        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
        @if(App::getLocale()!==$localeCode)
        <li class="navbar_li lung_nav"> <a  style="margin-right: 10px" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
@@ -229,7 +226,8 @@ use TCG\Voyager\Models\Setting;
 </div>
 
 <!-- jQuery -->
-<script src="{{ asset('js/jquery.min.js') }}"></script>
+<!-- <script src="{{ asset('js/jquery.min.js') }}"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
 <!-- Bootstrap -->
