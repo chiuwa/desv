@@ -41,7 +41,7 @@
 
 					</div>
 					<div class="service_apply">
-						<a href="#" data-toggle="modal" data-target="#exampleModal">@lang('frontend.free_quota')</a>
+						<a href="#" data-id="intern_plan" class="quota_button" data-toggle="modal" data-target="#Quota_Modal">@lang('frontend.free_quota')</a>
 
 					</div>
 				</div>
@@ -85,7 +85,7 @@
 
 					</div>
 					<div class="service_apply">
-						<a href="#" data-toggle="modal" data-target="#exampleModal">@lang('frontend.free_quota')</a>
+						<a href="#" data-id="low_lv_plan" class="quota_button" data-toggle="modal" data-target="#Quota_Modal">@lang('frontend.free_quota')</a>
 
 					</div>
 				</div>
@@ -132,7 +132,7 @@
 
 					</div>
 					<div class="service_apply">
-						<a href="#" data-toggle="modal" data-target="#exampleModal">@lang('frontend.free_quota')</a>
+						<a href="#"  data-id="full_plan" class="quota_button" data-toggle="modal" data-target="#Quota_Modal">@lang('frontend.free_quota')</a>
 
 					</div>
 				</div>
@@ -144,7 +144,7 @@
 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="Quota_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -154,19 +154,89 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				
+				<label id="selected_plan"></label>
+				{!! Form::open(array('action' => 'HomeController@plan_asking')) !!}
+				<div class="col-md-12 col-xs-12">
+					<div class="col-md-12">
+						<div style="margin-top:25px; ">
+
+							<label class="radio-inline ">{!! Form::radio('title', "mr", null,['required']) !!}Mr.</label>
+
+							<label class="radio-inline ">{!! Form::radio('title', "mrs", null) !!}Mrs.</label>
+
+							<label class="radio-inline ">{!! Form::radio('title', "miss", null) !!}Miss</label>
+
+						</div>   
+
+					</div>
+					<div class="col-md-12">
+						<input class="pass text-center" name="name" type="text" align="center" placeholder="Surname" required="true">       
+					</div>
+
+					<div class="col-md-12">
+						<input class="pass text-center" name="email" type="email" align="center" placeholder="Email" required="true">
+					</div>	
+					<div class="col-md-4 col-xs-4">                    
+						<select class="form-control option_list" name="area_code">
+							<option>+852</option>
+							<option>+853</option>
+							<option>+86</option>
+							<option>other</option>                         
+						</select>
+
+					</div>
+					<div class="col-md-8 col-xs-8">
+						<input class="pass text-center" name="mobile" type="text" align="center" placeholder="Mobile" required="true">
+					</div>
+					<div class="col-md-12">
+						<input class="pass text-center" name="plan" type="hidden" align="center" placeholder="plan">
+					</div>	
+						<div class="col-md-12">
+						<div style="margin-top:25px; ">
+
+							<label class="radio-inline ">{!! Form::radio('contact_type', "mobile", null,['required']) !!}Call you first</label>
+
+							<label class="radio-inline ">{!! Form::radio('contact_type', "email", null) !!}Email you first</label>
+
+						</div>   
+
+					</div>
+
+
+				</div>
+
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Submit</button>
+				{{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
 			</div>
+			{{ Form::close() }}
 		</div>
 	</div>
 </div>
 
 
+<div id="popupmodal" class="modal hide fade popup_model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p class="text-center">
+     @php
+     if(Session::has('modal_message_success')){
+     echo( Session::get('modal_message_success') );
+   }elseif(Session::has('modal_message_error')){
+   echo(  Session::get('modal_message_error') );
+ }
+ @endphp
+</p>
+</div>
 
-
+<div class="modal-footer">
+  <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script>	
 	//定義變數
@@ -203,7 +273,7 @@
     		}
     	};
 
-    	console.log("---------Rader Data--------");
+    	
     	var graphData =new Array();
     	graphData.push(60);
     	graphData.push(40);
@@ -211,10 +281,6 @@
 	// graphData.push(20);
 	// graphData.push(97);
 	
-	
-	console.log("--------Rader Create-------------");
-	console.log(graphData);
-
 	//CreateData
 	chartRadarData = {
 		labels: [' {!! trans('frontend.Cost-effectiveness') !!}', '{!! trans('frontend.Time benefit') !!}', '{!! trans('frontend.Experience') !!}'],
@@ -273,7 +339,7 @@
     		}
     	};
 
-    	console.log("---------Rader Data--------");
+    	
     	var graphData2 =new Array();
     	graphData2.push(75);
     	graphData2.push(60);
@@ -281,9 +347,6 @@
 	// graphData.push(20);
 	// graphData.push(97);
 	
-	
-	console.log("--------Rader Create-------------");
-	console.log(graphData2);
 
 	//CreateData
 	chartRadarData2 = {
@@ -344,7 +407,7 @@
     		}
     	};
 
-    	console.log("---------Rader Data--------");
+
     	var graphData3 =new Array();
     	graphData3.push(90);
     	graphData3.push(70);
@@ -352,10 +415,6 @@
 	// graphData.push(20);
 	// graphData.push(97);
 	
-	
-	console.log("--------Rader Create-------------");
-	console.log(graphData3);
-
 	//CreateData
 	chartRadarData3 = {
 		labels: [' {!! trans('frontend.Cost-effectiveness') !!}', '{!! trans('frontend.Time benefit') !!}', '{!! trans('frontend.Experience') !!}'],
@@ -379,5 +438,33 @@
 	});
 </script>
 
+<script>
+$(function(){
+	$( ".quota_button" ).bind('click',function(){
+		$plan_name = $( this).data('id');
+		console.log($plan_name);
+		if ($plan_name == 'intern_plan'){
+			$("#selected_plan").text("{!! trans('frontend.intern') !!}");
+			$('input[name=plan]').val('intern');
+		}
+		if ($plan_name == 'low_lv_plan'){
+			$("#selected_plan").text("{!! trans('frontend.low_lv_plan') !!}");
+				$('input[name=plan]').val('basic');
+		}
+		if ($plan_name == 'full_plan'){
+			$("#selected_plan").text("{!! trans('frontend.full_lv_plan') !!}");
+				$('input[name=plan]').val('standard ');
+		}
+	});
+	});
+</script>
+@if( Session::has('modal_message_error') || Session::has('modal_message_success'))
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#popupmodal').modal();
+    $('#popupmodal').removeClass( "hide" )
+  });
+</script>
 
+@endif
 @endsection

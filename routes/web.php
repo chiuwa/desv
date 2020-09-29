@@ -40,14 +40,18 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),  'middleware' => ['l
 	Route::group(['before'=>'auth'], function(){
      Route::get('logout', 'LoginController@logout');
  });
-    Route::get('/','HomeController@home');
-    Route::get('/service','HomeController@service');
+    Route::get('/','HomeController@home')->name('home');
+    Route::get('/service','HomeController@service')->name('service');
+	Route::get('/platform','HomeController@platform')->name('platform');
+        Route::get('/design','HomeController@develop')->name('design');
+            Route::get('/develop','HomeController@develop')->name('develop');
+                Route::get('/contact','HomeController@contact')->name('contact');
     Route::get('/home', 'HomeController@home')->name('home');
     Route::get('/blog/view/{id}', 'BlogController@home');
     Route::post('/asking', 'HomeController@asking')->name('asking');
-
+    Route::post('/plan_asking', 'HomeController@plan_asking')->name('plan_asking');
     Route::get('login', 'LoginController@show');
-    Route::post('login', 'LoginController@login');
+    Route::post('login', 'LoginController@login')->name('login');
     Route::post('client_register', 'LoginController@client_register');
     Route::post('staff_register', 'LoginController@staff_register');
 

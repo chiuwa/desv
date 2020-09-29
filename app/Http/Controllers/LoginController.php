@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\Post;
 use App\AskingQuery;
+use App\User;
 use DB;
 use Redirect;
 use Auth;
@@ -31,7 +32,13 @@ class LoginController extends Controller {
             ]);
 
             if ($attempt) {
-                return Redirect::intended('home');
+				
+				$find_user= User::leftJoin('roles', 'users.role_id', '=', 'roles.id')
+                ->where('users.email', '=', $request->email)
+                ->select('users.*','roles.name as roles')
+                ->first();
+				
+                return Redirect::intended('/platform/index');
             }
 
             return Redirect::to('login')

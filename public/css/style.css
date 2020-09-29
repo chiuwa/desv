@@ -542,7 +542,10 @@ body {
 }
 
 
-
+#selected_plan{
+  font-weight: bold;
+  font-size: 20px;
+}
 
 .validate-input {
   position: relative;
